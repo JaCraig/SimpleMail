@@ -1,1 +1,3 @@
 # SimpleMail
+
+Wrapper for MailKit.
