@@ -13,7 +13,7 @@
     <copyright>Copyright 2016</copyright>
     <tags>Email</tags>
     <dependencies>
-      <dependency id="NETStandard.Library" version="1.6.0" />
+      <dependency id="NETStandard.Library" version="1.6.1" />
       <dependency id="MailKit" version="1.10.0" />
     </dependencies>
   </metadata>

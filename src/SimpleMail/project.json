@@ -11,7 +11,7 @@
     "tags": [ "Email" ]
   },
   "dependencies": {
-    "NETStandard.Library": "1.6.0",
+    "NETStandard.Library": "1.6.1",
     "MailKit": "1.10.0"
   },
   "frameworks": {

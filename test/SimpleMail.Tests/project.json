@@ -16,6 +16,7 @@
   "dependencies": {
     "xunit": "2.2.0-*",
     "SimpleMail": "1.0.*",
+    "Microsoft.NETCore.App": "1.1.0",
     "dotnet-test-xunit": "2.2.0-*"
   },
   "runtimes": {
@@ -26,10 +27,6 @@
   "frameworks": {
     "netcoreapp1.0": {
       "dependencies": {
-        "Microsoft.NETCore.App": {
-          "type": "platform",
-          "version": "1.0.0-*"
-        }
       },
       "imports": [
         "portable-net45+win8",
