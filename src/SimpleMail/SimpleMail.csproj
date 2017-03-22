@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <BuildNumber Condition=" '$(APPVEYOR_BUILD_NUMBER)' != '' ">$(APPVEYOR_BUILD_NUMBER)</BuildNumber>
+    <!-- for AppVeyor -->
+    <BuildNumber Condition=" '$(BUILD_NUMBER)' != '' ">$(BUILD_NUMBER)</BuildNumber>
+    <!-- for Team City -->
+    <BuildNumber Condition=" '$(BuildNumber)' == '' ">0</BuildNumber>
+    <!-- if not set -->
+    <Description>SimpleMail is a library wrapper designed to simplify sending an email. It is .Net Core compatible.</Description>
+    <AssemblyTitle>SimpleMail</AssemblyTitle>
+    <Authors>James Craig</Authors>
+    <TargetFramework>netstandard1.1</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>SimpleMail</AssemblyName>
+    <PackageId>SimpleMail</PackageId>
+    <PackageTags>Email</PackageTags>
+    <PackageProjectUrl>https://github.com/JaCraig/SimpleMail</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/JaCraig/SimpleMail/blob/master/LICENSE</PackageLicenseUrl>
+    <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
+    <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>1.0.$(BuildNumber)</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="1.12.0" />
+  </ItemGroup>
+
+</Project>

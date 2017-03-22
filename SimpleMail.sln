@@ -1,20 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{55BD53A1-A7CE-4A22-828D-1F713CA1BDB6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{02EE5FCA-FFBB-414B-8979-D806FE9E441E}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SimpleMail", "src\SimpleMail\SimpleMail.xproj", "{CF40C9A0-7CA4-4FA4-9F47-D4B1805018BE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{22207B37-E7B5-4970-9073-1AAB70935DFD}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SimpleMail.Tests", "test\SimpleMail.Tests\SimpleMail.Tests.xproj", "{75F00178-F9E1-4041-BCA3-5EB297D2D3F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleMail", "src\SimpleMail\SimpleMail.csproj", "{CF40C9A0-7CA4-4FA4-9F47-D4B1805018BE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleMail.Tests", "test\SimpleMail.Tests\SimpleMail.Tests.csproj", "{75F00178-F9E1-4041-BCA3-5EB297D2D3F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
