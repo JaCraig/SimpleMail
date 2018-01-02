@@ -10,24 +10,22 @@
     <Description>SimpleMail is a library wrapper designed to simplify sending an email. It is .Net Core compatible.</Description>
     <AssemblyTitle>SimpleMail</AssemblyTitle>
     <Authors>James Craig</Authors>
-    <TargetFramework>netstandard1.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>SimpleMail</AssemblyName>
     <PackageId>SimpleMail</PackageId>
     <PackageTags>Email</PackageTags>
     <PackageProjectUrl>https://github.com/JaCraig/SimpleMail</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/JaCraig/SimpleMail/blob/master/LICENSE</PackageLicenseUrl>
-    <NetStandardImplicitPackageVersion>1.6.1</NetStandardImplicitPackageVersion>
-    <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.0.$(BuildNumber)</Version>
+    <Version>2.0.$(BuildNumber)</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MailKit" Version="1.12.0" />
+    <PackageReference Include="MailKit" Version="2.0.0" />
   </ItemGroup>
 
 </Project>
