@@ -157,17 +157,17 @@ namespace SimpleMail
         {
             var InternalMessage = new MimeMessage();
             InternalMessage.From.Add(new MailboxAddress(From));
-            var ToSplit = To.Split(new string[] { ",", ";" }, StringSplitOptions.RemoveEmptyEntries);
+            var ToSplit = To?.Split(new string[] { ",", ";" }, StringSplitOptions.RemoveEmptyEntries) ?? new string[0];
             foreach (var Item in ToSplit)
             {
                 InternalMessage.To.Add(new MailboxAddress(Item));
             }
-            var BccSplit = Bcc.Split(new string[] { ",", ";" }, StringSplitOptions.RemoveEmptyEntries);
+            var BccSplit = Bcc?.Split(new string[] { ",", ";" }, StringSplitOptions.RemoveEmptyEntries) ?? new string[0];
             foreach (var Item in BccSplit)
             {
                 InternalMessage.Bcc.Add(new MailboxAddress(Item));
             }
-            var CcSplit = Cc.Split(new string[] { ",", ";" }, StringSplitOptions.RemoveEmptyEntries);
+            var CcSplit = Cc?.Split(new string[] { ",", ";" }, StringSplitOptions.RemoveEmptyEntries) ?? new string[0];
             foreach (var Item in CcSplit)
             {
                 InternalMessage.Cc.Add(new MailboxAddress(Item));
