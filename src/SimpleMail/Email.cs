@@ -18,6 +18,7 @@ using MailKit.Net.Smtp;
 using MimeKit;
 using MimeKit.Text;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace SimpleMail
@@ -35,6 +36,12 @@ namespace SimpleMail
             Priority = MessagePriority.Normal;
             Port = 25;
         }
+
+        /// <summary>
+        /// Gets the attachments.
+        /// </summary>
+        /// <value>The attachments.</value>
+        public List<Attachment> Attachments { get; } = new List<Attachment>();
 
         /// <summary>
         /// Gets or sets the BCC.
@@ -153,27 +160,42 @@ namespace SimpleMail
             }
         }
 
+        /// <summary>
+        /// Setups the message.
+        /// </summary>
+        /// <returns></returns>
         private MimeMessage SetupMessage()
         {
             var InternalMessage = new MimeMessage();
-            InternalMessage.From.Add(new MailboxAddress(From));
-            var ToSplit = To?.Split(new string[] { ",", ";" }, StringSplitOptions.RemoveEmptyEntries) ?? new string[0];
-            foreach (var Item in ToSplit)
+            InternalMessage.From.Add(new MailboxAddress(string.Empty, From));
+            foreach (var Item in To?.Split(new string[] { ",", ";" }, StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>())
             {
-                InternalMessage.To.Add(new MailboxAddress(Item));
+                InternalMessage.To.Add(new MailboxAddress(string.Empty, Item));
             }
-            var BccSplit = Bcc?.Split(new string[] { ",", ";" }, StringSplitOptions.RemoveEmptyEntries) ?? new string[0];
-            foreach (var Item in BccSplit)
+            foreach (var Item in Bcc?.Split(new string[] { ",", ";" }, StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>())
             {
-                InternalMessage.Bcc.Add(new MailboxAddress(Item));
+                InternalMessage.Bcc.Add(new MailboxAddress(string.Empty, Item));
             }
-            var CcSplit = Cc?.Split(new string[] { ",", ";" }, StringSplitOptions.RemoveEmptyEntries) ?? new string[0];
-            foreach (var Item in CcSplit)
+            foreach (var Item in Cc?.Split(new string[] { ",", ";" }, StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>())
             {
-                InternalMessage.Cc.Add(new MailboxAddress(Item));
+                InternalMessage.Cc.Add(new MailboxAddress(string.Empty, Item));
             }
             InternalMessage.Subject = Subject;
-            InternalMessage.Body = new TextPart(TextFormat.Html) { Text = Body };
+            MimeEntity Content = new TextPart(TextFormat.Html) { Text = Body };
+            if (Attachments.Count > 0)
+            {
+                var TempContent = new Multipart("mixed")
+                {
+                    Content
+                };
+                Content = TempContent;
+                foreach (var Attachment in Attachments)
+                {
+                    TempContent.Add(Attachment.Convert());
+                }
+            }
+            InternalMessage.Body = Content;
+
             InternalMessage.Priority = Priority;
             InternalMessage.Importance = MessageImportance.Normal;
             return InternalMessage;
