@@ -15,6 +15,7 @@ limitations under the License.
 */
 
 using MimeKit;
+using MimeKit.Utils;
 using System.IO;
 
 namespace SimpleMail
@@ -31,10 +32,8 @@ namespace SimpleMail
         /// <param name="mimeType">Type of the MIME.</param>
         /// <param name="content">The content.</param>
         public Attachment(string fileName, string mimeType, byte[] content)
+            : this(fileName, mimeType, new MemoryStream(content))
         {
-            FileName = fileName;
-            MimeType = mimeType;
-            Content = new MemoryStream(content);
         }
 
         /// <summary>
@@ -48,6 +47,7 @@ namespace SimpleMail
             FileName = fileName;
             MimeType = mimeType;
             Content = content;
+            ContentId = MimeUtils.GenerateMessageId();
         }
 
         /// <summary>
@@ -55,6 +55,12 @@ namespace SimpleMail
         /// </summary>
         /// <value>The content.</value>
         public Stream Content { get; }
+
+        /// <summary>
+        /// Gets or sets the content identifier (used for embedding images, etc.).
+        /// </summary>
+        /// <value>The content identifier.</value>
+        public string ContentId { get; set; }
 
         /// <summary>
         /// Gets the name of the file.
@@ -77,6 +83,7 @@ namespace SimpleMail
             return new MimePart(MimeType)
             {
                 Content = new MimeContent(Content),
+                ContentId = ContentId,
                 ContentDisposition = new ContentDisposition(ContentDisposition.Attachment),
                 ContentTransferEncoding = ContentEncoding.Base64,
                 FileName = FileName,

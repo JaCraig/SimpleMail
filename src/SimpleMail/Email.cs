@@ -29,15 +29,6 @@ namespace SimpleMail
     public class Email
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Email"/> class.
-        /// </summary>
-        public Email()
-        {
-            Priority = MessagePriority.Normal;
-            Port = 25;
-        }
-
-        /// <summary>
         /// Gets the attachments.
         /// </summary>
         /// <value>The attachments.</value>
@@ -83,13 +74,13 @@ namespace SimpleMail
         /// Gets or sets the port.
         /// </summary>
         /// <value>The port.</value>
-        public int Port { get; set; }
+        public int Port { get; set; } = 25;
 
         /// <summary>
         /// Gets or sets the priority.
         /// </summary>
         /// <value>The priority.</value>
-        public MessagePriority Priority { get; set; }
+        public MessagePriority Priority { get; set; } = MessagePriority.Normal;
 
         /// <summary>
         /// Gets or sets the server.
@@ -161,26 +152,37 @@ namespace SimpleMail
         }
 
         /// <summary>
+        /// Splits the recipients.
+        /// </summary>
+        /// <param name="list">The list.</param>
+        /// <param name="mailboxes">The mailboxes.</param>
+        private static void SplitRecipients(InternetAddressList list, string mailboxes)
+        {
+            if (string.IsNullOrEmpty(mailboxes) || list is null)
+                return;
+            var SplitMailboxes = mailboxes?.Split(new string[] { ",", ";" }, StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
+            for (int i = 0; i < SplitMailboxes.Length; i++)
+            {
+                list.Add(new MailboxAddress("", SplitMailboxes[i]));
+            }
+        }
+
+        /// <summary>
         /// Setups the message.
         /// </summary>
         /// <returns></returns>
         private MimeMessage SetupMessage()
         {
-            var InternalMessage = new MimeMessage();
+            var InternalMessage = new MimeMessage()
+            {
+                Subject = Subject,
+                Priority = Priority,
+                Importance = MessageImportance.Normal
+            };
             InternalMessage.From.Add(new MailboxAddress(string.Empty, From));
-            foreach (var Item in To?.Split(new string[] { ",", ";" }, StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>())
-            {
-                InternalMessage.To.Add(new MailboxAddress(string.Empty, Item));
-            }
-            foreach (var Item in Bcc?.Split(new string[] { ",", ";" }, StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>())
-            {
-                InternalMessage.Bcc.Add(new MailboxAddress(string.Empty, Item));
-            }
-            foreach (var Item in Cc?.Split(new string[] { ",", ";" }, StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>())
-            {
-                InternalMessage.Cc.Add(new MailboxAddress(string.Empty, Item));
-            }
-            InternalMessage.Subject = Subject;
+            SplitRecipients(InternalMessage.To, To);
+            SplitRecipients(InternalMessage.Bcc, Bcc);
+            SplitRecipients(InternalMessage.Cc, Cc);
             MimeEntity Content = new TextPart(TextFormat.Html) { Text = Body };
             if (Attachments.Count > 0)
             {
@@ -195,9 +197,6 @@ namespace SimpleMail
                 }
             }
             InternalMessage.Body = Content;
-
-            InternalMessage.Priority = Priority;
-            InternalMessage.Importance = MessageImportance.Normal;
             return InternalMessage;
         }
     }
