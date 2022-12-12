@@ -10,7 +10,7 @@
     <Description>SimpleMail is a library wrapper designed to simplify sending an email. It is .Net Core compatible.</Description>
     <AssemblyTitle>SimpleMail</AssemblyTitle>
     <Authors>James Craig</Authors>
-	  <TargetFrameworks>netstandard2.0;net5.0;net6.0</TargetFrameworks>
+	  <TargetFrameworks>net6.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>SimpleMail</AssemblyName>
     <PackageId>SimpleMail</PackageId>
@@ -21,10 +21,10 @@
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>2.0.$(BuildNumber)</Version>
+    <Version>3.0.$(BuildNumber)</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MailKit" Version="3.2.0" />
+    <PackageReference Include="MailKit" Version="3.4.3" />
   </ItemGroup>
 </Project>
