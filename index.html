@@ -94,8 +94,65 @@
                     <article class="content wrap" id="_content" data-uid="">
 <h1 id="simplemail">SimpleMail</h1>
 
-<p><a href="https://ci.appveyor.com/project/JaCraig/simplemail"><img src="https://ci.appveyor.com/api/projects/status/5r13afor4u9n5r6l?svg=true" alt="Build status"></a></p>
-<p>Library designed to simplify sending an email in .Net Core.</p>
+<p><a href="https://github.com/JaCraig/SimpleMail/actions/workflows/dotnet-publish.yml"><img src="https://github.com/JaCraig/SimpleMail/actions/workflows/dotnet-publish.yml/badge.svg" alt=".NET Publish"></a></p>
+<p>SimpleMail is a C# library designed to simplify sending emails. It provides a convenient and straightforward interface for sending email messages.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Easy-to-use API for sending emails and attachments</li>
+<li>Compatible with .NET 6 and above</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>SimpleMail can be easily installed via NuGet:</p>
+<pre><code>dotnet add package SimpleMail
+</code></pre>
+<p>Alternatively, you can search for &quot;SimpleMail&quot; in the NuGet Package Manager UI and install it from there.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>To use SimpleMail in your project, follow these simple steps:</p>
+<ol>
+<li>Add a reference to the SimpleMail namespace in your code file:</li>
+</ol>
+<pre><code class="lang-csharp">    using SimpleMail;
+</code></pre>
+<ol start="2">
+<li>Create an instance of the <code>EmailMessage</code> class:</li>
+</ol>
+<pre><code class="lang-csharp">    // Create a new email
+    Email email = new Email
+    {
+        // Email address to send the email from
+        From = &quot;system@example.com&quot;,
+        // Email address to send the email to
+        To = &quot;someone@example.com&quot;,
+        // Subject of the email
+        Subject = &quot;Example Subject&quot;,
+        // Body of the email
+        Body = &quot;Example Body&quot;,
+        // Password of the email account
+        Password = &quot;password&quot;,
+        // Email server to send the email
+        Server = &quot;smtp.example.com&quot;,
+        // Username of the email account
+        UserName = &quot;username&quot;,
+        // Port of the email server (default is 25)
+        Port = 587,
+        // Use SSL to encrypt the connection
+        UseSSL = true,
+        // Priority of the email
+        Priority = MimeKit.MessagePriority.Urgent
+    };
+</code></pre>
+<ol start="3">
+<li>Send the email:</li>
+</ol>
+<pre><code class="lang-csharp">await email.SendAsync().ConfigureAwait(false);
+</code></pre>
+<p>That's it! You have successfully sent an email using SimpleMail.</p>
+<h2 id="compatibility">Compatibility</h2>
+<p>SimpleMail is compatible with .NET 6 and above.</p>
+<h2 id="contributing">Contributing</h2>
+<p>We welcome contributions to SimpleMail! If you encounter any issues, have suggestions for improvements, or would like to contribute new features, please feel free to submit a pull request.</p>
+<h2 id="license">License</h2>
+<p>SimpleMail is released under the <a href="https://github.com/JaCraig/SimpleMail/blob/master/LICENSE">Apache 2 License</a>.</p>
 </article>
                 </div>
 
