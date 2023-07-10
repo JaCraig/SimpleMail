@@ -17,7 +17,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Version>3.0.1</Version>
     <Title>SimpleMail</Title>
-    <Copyright>Copyright © James Craig 2020</Copyright>
+    <Copyright>Copyright © James Craig 2016</Copyright>
     <PackageIcon>Icon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/JaCraig/SimpleMail</RepositoryUrl>
