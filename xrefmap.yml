@@ -164,6 +164,19 @@ references:
   isSpec: "True"
   fullName: SimpleMail.Email.From
   nameWithType: Email.From
+- uid: SimpleMail.Email.IgnoreServerCertificateIssues
+  name: IgnoreServerCertificateIssues
+  href: api/SimpleMail.Email.html#SimpleMail_Email_IgnoreServerCertificateIssues
+  commentId: P:SimpleMail.Email.IgnoreServerCertificateIssues
+  fullName: SimpleMail.Email.IgnoreServerCertificateIssues
+  nameWithType: Email.IgnoreServerCertificateIssues
+- uid: SimpleMail.Email.IgnoreServerCertificateIssues*
+  name: IgnoreServerCertificateIssues
+  href: api/SimpleMail.Email.html#SimpleMail_Email_IgnoreServerCertificateIssues_
+  commentId: Overload:SimpleMail.Email.IgnoreServerCertificateIssues
+  isSpec: "True"
+  fullName: SimpleMail.Email.IgnoreServerCertificateIssues
+  nameWithType: Email.IgnoreServerCertificateIssues
 - uid: SimpleMail.Email.LocalDomain
   name: LocalDomain
   href: api/SimpleMail.Email.html#SimpleMail_Email_LocalDomain
