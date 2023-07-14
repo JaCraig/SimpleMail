@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.3"></a>
+## [3.0.3](https://www.github.com/JaCraig/SimpleMail/releases/tag/v3.0.3) (2023-7-14)
+
+### Bug Fixes
+
+* Adding ability to Async call also ([fe9968a](https://www.github.com/JaCraig/SimpleMail/commit/fe9968aede7c9f23f527b22777b27e333b51fd60))
+
+### Other
+
+* Merge branch 'master' of https://github.com/JaCraig/SimpleMail ([d0e4d51](https://www.github.com/JaCraig/SimpleMail/commit/d0e4d511a50031f7f1037776ec763e2bcbb5fdce))
+
 <a name="3.0.2"></a>
 ## [3.0.2](https://www.github.com/JaCraig/SimpleMail/releases/tag/v3.0.2) (2023-7-14)
 
