@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.2"></a>
+## [3.0.2](https://www.github.com/JaCraig/SimpleMail/releases/tag/v3.0.2) (2023-7-14)
+
+### Bug Fixes
+
+* Adding ability to ignore certificate issues ([8afe026](https://www.github.com/JaCraig/SimpleMail/commit/8afe026ca0765da2c656a656684fedf95e906a12))
+
+### Other
+
+* Merge branch 'master' of https://github.com/JaCraig/SimpleMail ([1537037](https://www.github.com/JaCraig/SimpleMail/commit/15370379a36a880a0af5092727adb50372f89ff7))
+* Icon update ([a14365d](https://www.github.com/JaCraig/SimpleMail/commit/a14365d75bd52e3d9fe7024e8e15eb242b74bdcc))
+* Update dependabot.yml ([8d069ee](https://www.github.com/JaCraig/SimpleMail/commit/8d069ee09113f86ae5a86929d32148b7fb4f9abd))
+* updating readme ([f33e19b](https://www.github.com/JaCraig/SimpleMail/commit/f33e19bec0db4ee9349e5a4b94f11837efb6abe4))
+
 <a name="3.0.1"></a>
 ## [3.0.1](https://www.github.com/JaCraig/SimpleMail/releases/tag/v3.0.1) (2023-7-10)
 
