@@ -19,6 +19,8 @@ using MimeKit;
 using MimeKit.Text;
 using System;
 using System.Collections.Generic;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 
 namespace SimpleMail
@@ -57,6 +59,14 @@ namespace SimpleMail
         /// </summary>
         /// <value>From.</value>
         public string From { get; set; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether to [ignore server certificate issues].
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if it should [ignore server certificate issues]; otherwise, <c>false</c>.
+        /// </value>
+        public bool IgnoreServerCertificateIssues { get; set; }
 
         /// <summary>
         /// Gets or sets the local domain.
@@ -120,6 +130,10 @@ namespace SimpleMail
             var Message = SetupMessage();
             using (var Client = new SmtpClient())
             {
+                if (IgnoreServerCertificateIssues)
+                {
+                    Client.ServerCertificateValidationCallback = (object _, X509Certificate __, X509Chain ___, SslPolicyErrors ____) => true;
+                }
                 Client.LocalDomain = LocalDomain;
                 Client.Connect(Server, Port, UseSSL);
                 if (!string.IsNullOrEmpty(UserName))
