@@ -154,6 +154,10 @@ namespace SimpleMail
             var Message = SetupMessage();
             using (var Client = new SmtpClient())
             {
+                if (IgnoreServerCertificateIssues)
+                {
+                    Client.ServerCertificateValidationCallback = (object _, X509Certificate __, X509Chain ___, SslPolicyErrors ____) => true;
+                }
                 Client.LocalDomain = LocalDomain;
                 await Client.ConnectAsync(Server, Port, UseSSL).ConfigureAwait(false);
                 if (!string.IsNullOrEmpty(UserName))
