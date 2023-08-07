@@ -294,19 +294,6 @@ references:
   isSpec: "True"
   fullName: SimpleMail.Email.To
   nameWithType: Email.To
-- uid: SimpleMail.Email.UserName
-  name: UserName
-  href: api/SimpleMail.Email.html#SimpleMail_Email_UserName
-  commentId: P:SimpleMail.Email.UserName
-  fullName: SimpleMail.Email.UserName
-  nameWithType: Email.UserName
-- uid: SimpleMail.Email.UserName*
-  name: UserName
-  href: api/SimpleMail.Email.html#SimpleMail_Email_UserName_
-  commentId: Overload:SimpleMail.Email.UserName
-  isSpec: "True"
-  fullName: SimpleMail.Email.UserName
-  nameWithType: Email.UserName
 - uid: SimpleMail.Email.UseSSL
   name: UseSSL
   href: api/SimpleMail.Email.html#SimpleMail_Email_UseSSL
@@ -320,3 +307,16 @@ references:
   isSpec: "True"
   fullName: SimpleMail.Email.UseSSL
   nameWithType: Email.UseSSL
+- uid: SimpleMail.Email.UserName
+  name: UserName
+  href: api/SimpleMail.Email.html#SimpleMail_Email_UserName
+  commentId: P:SimpleMail.Email.UserName
+  fullName: SimpleMail.Email.UserName
+  nameWithType: Email.UserName
+- uid: SimpleMail.Email.UserName*
+  name: UserName
+  href: api/SimpleMail.Email.html#SimpleMail_Email_UserName_
+  commentId: Overload:SimpleMail.Email.UserName
+  isSpec: "True"
+  fullName: SimpleMail.Email.UserName
+  nameWithType: Email.UserName
