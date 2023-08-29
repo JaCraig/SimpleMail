@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.5"></a>
+## [3.0.5](https://www.github.com/JaCraig/SimpleMail/releases/tag/v3.0.5) (2023-8-29)
+
+### Bug Fixes
+
+* bump the dependencies group with 1 update ([da617cc](https://www.github.com/JaCraig/SimpleMail/commit/da617cca01a04819d10153ac7b9e651ac2a6e79d))
+
+### Other
+
+* Merge pull request #6 from JaCraig/dependabot/nuget/test/SimpleMail.Tests/dependencies-7c5f3fc8cd ([a5129c1](https://www.github.com/JaCraig/SimpleMail/commit/a5129c10f79ea5de25f537078c317ea79c2b9a9c))
+* Merge pull request #7 from JaCraig/dependabot/nuget/dependencies-f6edfbdd22 ([35c50e3](https://www.github.com/JaCraig/SimpleMail/commit/35c50e3a9baf40bc6d35488b73687f01d69e4417))
+* bump the dependencies group ([c06472c](https://www.github.com/JaCraig/SimpleMail/commit/c06472c3e5e990de51f1e8e33ad27d2b6da9446f))
+* Update dependabot.yml ([7c7e2d6](https://www.github.com/JaCraig/SimpleMail/commit/7c7e2d6cc280e87dc1445e80e202184c618b0dd4))
+* Update dependabot.yml ([8d6d2a5](https://www.github.com/JaCraig/SimpleMail/commit/8d6d2a5257d15891503d2ccf5fb7958328d82d37))
+
 <a name="3.0.4"></a>
 ## [3.0.4](https://www.github.com/JaCraig/SimpleMail/releases/tag/v3.0.4) (2023-8-7)
 
