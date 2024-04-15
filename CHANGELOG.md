@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.15"></a>
+## [3.0.15](https://www.github.com/JaCraig/SimpleMail/releases/tag/v3.0.15) (2024-04-15)
+
+### Bug Fixes
+
+* bump MailKit from 4.4.0 to 4.5.0 in the dependencies group ([87a260f](https://www.github.com/JaCraig/SimpleMail/commit/87a260f0e8e8d6ddfad24eec9731bd991c1a240f))
+
+### Other
+
+* Merge pull request #39 from JaCraig/dependabot/github_actions/dependencies-c3ed15e864 ([549079c](https://www.github.com/JaCraig/SimpleMail/commit/549079cad3e43708c90b5ccc598876f7bc239955))
+* Merge pull request #40 from JaCraig/dependabot/github_actions/dependencies-45223d3826 ([490c222](https://www.github.com/JaCraig/SimpleMail/commit/490c222b1ab497cddef7ab2220ccfcb153e1d65b))
+* Merge pull request #41 from JaCraig/dependabot/nuget/test/SimpleMail.Tests/dependencies-fc8f0a2f2d ([b2f68d6](https://www.github.com/JaCraig/SimpleMail/commit/b2f68d601c4330083b62104a9fa71ed5293a844b))
+* Merge pull request #42 from JaCraig/dependabot/nuget/dependencies-8ddabf151b ([ce9df9a](https://www.github.com/JaCraig/SimpleMail/commit/ce9df9a0e4d07a55b5e787e1ba7d6ffc8fc8e873))
+* bump peaceiris/actions-gh-pages in the dependencies group ([b2cebba](https://www.github.com/JaCraig/SimpleMail/commit/b2cebba0c3df22f750814962b95f5a3ca71ecc25))
+* bump the dependencies group ([531103f](https://www.github.com/JaCraig/SimpleMail/commit/531103fcf742b73f82c653d29a8cfc84a11cb967))
+* bump the dependencies group with 1 update ([63ccd37](https://www.github.com/JaCraig/SimpleMail/commit/63ccd370d99cf8e1ab2e1611d1eec54e2847b631))
+
 <a name="3.0.14"></a>
 ## [3.0.14](https://www.github.com/JaCraig/SimpleMail/releases/tag/v3.0.14) (2024-03-05)
 
