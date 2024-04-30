@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.16"></a>
+## [3.0.16](https://www.github.com/JaCraig/SimpleMail/releases/tag/v3.0.16) (2024-04-30)
+
+### Bug Fixes
+
+* bump versionize from 1.22.0 to 1.23.0 in the dependencies group ([33a652b](https://www.github.com/JaCraig/SimpleMail/commit/33a652b90efd2c85c202bc902358b4e03f994918))
+
+### Other
+
+* Merge pull request #43 from JaCraig/dependabot/github_actions/dependencies-67cf71b959 ([b34843d](https://www.github.com/JaCraig/SimpleMail/commit/b34843dea6d33895a7b994f6fb67c39ba2a7a606))
+* Merge pull request #44 from JaCraig/dependabot/nuget/test/SimpleMail.Tests/dependencies-10b8ce0db7 ([b8dbe60](https://www.github.com/JaCraig/SimpleMail/commit/b8dbe603a0252101877cb66e6d453285a802e220))
+* Merge pull request #45 from JaCraig/dependabot/nuget/dependencies-6d2d24f1fd ([37bf499](https://www.github.com/JaCraig/SimpleMail/commit/37bf499fcd78da2350498eb1ce9dda162b27d9b5))
+* bump dependabot/fetch-metadata in the dependencies group ([bd5cca8](https://www.github.com/JaCraig/SimpleMail/commit/bd5cca837e497c011d876be7ef00102c33473270))
+* bump the dependencies group ([c19a46f](https://www.github.com/JaCraig/SimpleMail/commit/c19a46f350e11c71236f4bf7126d33b0b61be29c))
+
 <a name="3.0.15"></a>
 ## [3.0.15](https://www.github.com/JaCraig/SimpleMail/releases/tag/v3.0.15) (2024-04-15)
 
