@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.17"></a>
+## [3.0.17](https://www.github.com/JaCraig/SimpleMail/releases/tag/v3.0.17) (2024-05-01)
+
+### Bug Fixes
+
+* bump versionize from 1.23.0 to 1.24.0 in the dependencies group ([35a93de](https://www.github.com/JaCraig/SimpleMail/commit/35a93de6bcebf4110f481880232fe360e0a9a3f8))
+
+### Other
+
+* Merge pull request #46 from JaCraig/dependabot/nuget/dependencies-97d5430f24 ([9660b47](https://www.github.com/JaCraig/SimpleMail/commit/9660b47940c927a601b4ada4e9510876cb66ffc1))
+
 <a name="3.0.16"></a>
 ## [3.0.16](https://www.github.com/JaCraig/SimpleMail/releases/tag/v3.0.16) (2024-04-30)
 
