@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.19"></a>
+## [3.0.19](https://www.github.com/JaCraig/SimpleMail/releases/tag/v3.0.19) (2024-05-20)
+
+### Bug Fixes
+
+* bump MailKit from 4.5.0 to 4.6.0 in the dependencies group ([e372235](https://www.github.com/JaCraig/SimpleMail/commit/e372235b42ee68f96a5e2cc18144e062ef93fdf6))
+
+### Other
+
+* Merge pull request #48 from JaCraig/dependabot/nuget/dependencies-67494f24aa ([401e5d8](https://www.github.com/JaCraig/SimpleMail/commit/401e5d8ee5a7e722e8fecb30840c9a3e4be4b126))
+
 <a name="3.0.18"></a>
 ## [3.0.18](https://www.github.com/JaCraig/SimpleMail/releases/tag/v3.0.18) (2024-05-06)
 
