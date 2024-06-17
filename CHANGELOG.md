@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.20"></a>
+## [3.0.20](https://www.github.com/JaCraig/SimpleMail/releases/tag/v3.0.20) (2024-06-17)
+
+### Bug Fixes
+
+* bump versionize from 1.25.0 to 1.27.0 in the dependencies group ([6fd3bc0](https://www.github.com/JaCraig/SimpleMail/commit/6fd3bc02dc0a39bf46e020c9a5560698131b3f1a))
+
+### Other
+
+* Merge pull request #49 from JaCraig/dependabot/nuget/test/SimpleMail.Tests/dependencies-d10d8338a5 ([f08174c](https://www.github.com/JaCraig/SimpleMail/commit/f08174cb08bca5a3c0624af2b8d4ed54435a760a))
+* Merge pull request #50 from JaCraig/dependabot/nuget/test/SimpleMail.Tests/dependencies-63bf006411 ([f2fd497](https://www.github.com/JaCraig/SimpleMail/commit/f2fd4974fd99a590c03560eb823cf12fead3d1b0))
+* Merge pull request #51 from JaCraig/dependabot/nuget/dependencies-6ac438fda8 ([757c9b3](https://www.github.com/JaCraig/SimpleMail/commit/757c9b3ad73a9e46f4a18e510946e0f56bf0dbf4))
+* bump Microsoft.NET.Test.Sdk ([2a8108a](https://www.github.com/JaCraig/SimpleMail/commit/2a8108a7eb6a502f9e6cc8f5165e566a8c3a8774))
+* bump the dependencies group ([ee61058](https://www.github.com/JaCraig/SimpleMail/commit/ee61058203cb725cb11f41f3e43ac14833ac71d3))
+
 <a name="3.0.19"></a>
 ## [3.0.19](https://www.github.com/JaCraig/SimpleMail/releases/tag/v3.0.19) (2024-05-20)
 
