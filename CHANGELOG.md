@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.22"></a>
+## [3.0.22](https://www.github.com/JaCraig/SimpleMail/releases/tag/v3.0.22) (2024-07-15)
+
+### Bug Fixes
+
+* bump MailKit from 4.7.0 to 4.7.1 in the dependencies group ([d6b8c08](https://www.github.com/JaCraig/SimpleMail/commit/d6b8c083174e1ccdc3ed2e5d59bff098324cef30))
+
+### Other
+
+* Merge pull request #53 from JaCraig/dependabot/github_actions/dependencies-c44bf69c3e ([b8f063d](https://www.github.com/JaCraig/SimpleMail/commit/b8f063d4c87cfda93ca8ab1dbe5f069ab8233bcb))
+* Merge pull request #54 from JaCraig/dependabot/nuget/test/SimpleMail.Tests/dependencies-8e312df114 ([478f162](https://www.github.com/JaCraig/SimpleMail/commit/478f1625cb970a551c3b57e8cd214810c308fd30))
+* Merge pull request #55 from JaCraig/dependabot/github_actions/dependencies-be62d4486d ([b62a0ec](https://www.github.com/JaCraig/SimpleMail/commit/b62a0ec2e68ae2170e793aa08a575a95d3d2eedf))
+* Merge pull request #56 from JaCraig/dependabot/nuget/dependencies-6668f56772 ([c61c1ff](https://www.github.com/JaCraig/SimpleMail/commit/c61c1ff6816116cc95b299fc725a5ee1cbcc12ee))
+* bump actions/setup-dotnet in the dependencies group ([139f5f7](https://www.github.com/JaCraig/SimpleMail/commit/139f5f7fbc840f3708766131f8ed35d39d75c2a1))
+* bump dependabot/fetch-metadata in the dependencies group ([9ce264b](https://www.github.com/JaCraig/SimpleMail/commit/9ce264b92f1cfe3924837d65427fb317a329ae1d))
+* bump the dependencies group ([b79379e](https://www.github.com/JaCraig/SimpleMail/commit/b79379e23aa463a96b00ff2c3d0f4a36e3d9d7ef))
+
 <a name="3.0.21"></a>
 ## [3.0.21](https://www.github.com/JaCraig/SimpleMail/releases/tag/v3.0.21) (2024-07-01)
 
