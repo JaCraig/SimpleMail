@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="3.0.24"></a>
+## [3.0.24](https://www.github.com/JaCraig/SimpleMail/releases/tag/v3.0.24) (2024-09-30)
+
+### Bug Fixes
+
+* bump MailKit from 4.7.1.1 to 4.8.0 in the dependencies group ([3a48ca8](https://www.github.com/JaCraig/SimpleMail/commit/3a48ca8256765df0065e780c69daa6aa6cbc738a))
+
+### Other
+
+* Merge pull request #58 from JaCraig/dependabot/nuget/test/SimpleMail.Tests/dependencies-20452041bf ([6c3b145](https://www.github.com/JaCraig/SimpleMail/commit/6c3b145c0f57651c1252c3b1744187a6161106e9))
+* Merge pull request #59 from JaCraig/dependabot/nuget/test/SimpleMail.Tests/dependencies-78c52a00e0 ([4ae8184](https://www.github.com/JaCraig/SimpleMail/commit/4ae818462dd5dce2ee886f569e414b2496dc098a))
+* Merge pull request #60 from JaCraig/dependabot/nuget/test/SimpleMail.Tests/dependencies-e833257e60 ([4299652](https://www.github.com/JaCraig/SimpleMail/commit/42996526448c5ddc76435625cba7cb90686ef538))
+* Merge pull request #61 from JaCraig/dependabot/nuget/test/SimpleMail.Tests/dependencies-799ab3113c ([9aae6dd](https://www.github.com/JaCraig/SimpleMail/commit/9aae6ddac1e80d46dde3e15a12ee850903476015))
+* Merge pull request #62 from JaCraig/dependabot/nuget/dependencies-37f3a69861 ([248da07](https://www.github.com/JaCraig/SimpleMail/commit/248da07fa7289c5d6b2437eb6948993cd7195c92))
+* bump Microsoft.NET.Test.Sdk ([2b764a8](https://www.github.com/JaCraig/SimpleMail/commit/2b764a852445598bd68a748711381cf416d35630))
+* bump Microsoft.NET.Test.Sdk ([e9c3361](https://www.github.com/JaCraig/SimpleMail/commit/e9c336174b813f552f25b9aff0cd77aaecae7cb8))
+* bump xunit in /test/SimpleMail.Tests in the dependencies group ([a7c54d6](https://www.github.com/JaCraig/SimpleMail/commit/a7c54d665436519b826568452280c029703a3bfb))
+* bump xunit in /test/SimpleMail.Tests in the dependencies group ([70fa39a](https://www.github.com/JaCraig/SimpleMail/commit/70fa39a25a32ab3d04e3ca7f7a6deb72fb2cb982))
+
 <a name="3.0.23"></a>
 ## [3.0.23](https://www.github.com/JaCraig/SimpleMail/releases/tag/v3.0.23) (2024-07-16)
 
