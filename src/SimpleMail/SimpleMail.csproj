@@ -15,7 +15,7 @@
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>3.0.26</Version>
+    <Version>3.0.27</Version>
     <Title>SimpleMail</Title>
     <Copyright>Copyright © James Craig 2016</Copyright>
     <PackageIcon>Icon.png</PackageIcon>
