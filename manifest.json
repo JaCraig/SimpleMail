@@ -11,11 +11,54 @@
       }
     },
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SimpleMail.Attachment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SimpleMail.Attachment.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SimpleMail.Email.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SimpleMail.Email.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SimpleMail.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SimpleMail.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
         ".html": {
           "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
         }
       },
       "version": ""
