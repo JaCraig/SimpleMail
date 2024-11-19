@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.0.1"></a>
+## [4.0.1](https://www.github.com/JaCraig/SimpleMail/releases/tag/v4.0.1) (2024-11-19)
+
+### Bug Fixes
+
+* bump Microsoft.CodeAnalysis.NetAnalyzers ([a695e7d](https://www.github.com/JaCraig/SimpleMail/commit/a695e7dec8a235e38a7349682471051509587c66))
+
+### Other
+
+* Merge pull request [#68](https://www.github.com/JaCraig/SimpleMail/issues/68) from JaCraig/dependabot/nuget/SimpleMail/dependencies-d8b1fcabe8 ([21fcfe2](https://www.github.com/JaCraig/SimpleMail/commit/21fcfe278227d028046a9b158151e7fe76a4c535))
+
 <a name="4.0.0"></a>
 ## [4.0.0](https://www.github.com/JaCraig/SimpleMail/releases/tag/v4.0.0) (2024-11-19)
 
