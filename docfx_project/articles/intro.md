@@ -1,2 +1,2 @@
 # Code
-[!code-csharp[](../SimpleMail.Example/Program.cs)]
+[!code-csharp[](../../SimpleMail.Example/Program.cs)]

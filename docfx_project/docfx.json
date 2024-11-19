@@ -3,7 +3,7 @@
     {
       "src": [
         {
-          "files": ["src/SimpleMail/SimpleMail.csproj"],
+          "files": ["SimpleMail/SimpleMail.csproj"],
           "src": "../"
         }
       ],
