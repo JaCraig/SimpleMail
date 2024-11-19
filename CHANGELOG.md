@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="4.0.0"></a>
+## [4.0.0](https://www.github.com/JaCraig/SimpleMail/releases/tag/v4.0.0) (2024-11-19)
+
+### Features
+
+* Updating to .Net 8/9 and CI/CD updates ([1a7ffb0](https://www.github.com/JaCraig/SimpleMail/commit/1a7ffb011058710d39b80be19bcbcf933e7b0f6c))
+
+### Breaking Changes
+
+* Updating to .Net 8/9 and CI/CD updates ([1a7ffb0](https://www.github.com/JaCraig/SimpleMail/commit/1a7ffb011058710d39b80be19bcbcf933e7b0f6c))
+
 <a name="3.0.27"></a>
 ## [3.0.27](https://www.github.com/JaCraig/SimpleMail/releases/tag/v3.0.27) (2024-11-11)
 
