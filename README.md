@@ -7,7 +7,7 @@ SimpleMail is a C# library designed to simplify sending emails. It provides a co
 ## Features
 
 - Easy-to-use API for sending emails and attachments
-- Compatible with .NET 6 and above
+- Compatible with .NET 8 and above
 
 ## Installation
 
@@ -68,7 +68,7 @@ That's it! You have successfully sent an email using SimpleMail.
 
 ## Compatibility
 
-SimpleMail is compatible with .NET 6 and above.
+SimpleMail is compatible with .NET 8 and above.
 
 ## Contributing
 

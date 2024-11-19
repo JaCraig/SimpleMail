@@ -4,7 +4,7 @@
     <Description>SimpleMail is a C# library designed to simplify sending emails. It provides a convenient and straightforward interface for sending email messages.</Description>
     <AssemblyTitle>SimpleMail</AssemblyTitle>
     <Authors>James Craig</Authors>
-	  <TargetFrameworks>net6.0</TargetFrameworks>
+	  <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>SimpleMail</AssemblyName>
     <PackageId>SimpleMail</PackageId>
@@ -34,11 +34,11 @@
 		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
 	</PropertyGroup>
 	<ItemGroup>
-	  <None Include="..\..\Icon.png">
+	  <None Include="..\Icon.png">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
-	  <None Include="..\..\README.md">
+	  <None Include="..\README.md">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
@@ -53,6 +53,6 @@
   </ItemGroup>
 	<Target Name="Husky" BeforeTargets="Restore;CollectPackageReferences" Condition="'$(HUSKY)' != 0">
 		<Exec Command="dotnet tool restore" StandardOutputImportance="Low" StandardErrorImportance="High" />
-		<Exec Command="dotnet husky install" StandardOutputImportance="Low" StandardErrorImportance="High" WorkingDirectory="../.." />
+		<Exec Command="dotnet husky install" StandardOutputImportance="Low" StandardErrorImportance="High" WorkingDirectory=".." />
 	</Target>
 </Project>
