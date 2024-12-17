@@ -38,7 +38,7 @@ To use SimpleMail in your project, follow these simple steps:
         // Email address to send the email from
         From = "system@example.com",
         // Email address to send the email to
-        To = "someone@example.com",
+        To = ["someone@example.com"],
         // Subject of the email
         Subject = "Example Subject",
         // Body of the email
@@ -54,9 +54,26 @@ To use SimpleMail in your project, follow these simple steps:
         // Use SSL to encrypt the connection
         UseSSL = true,
         // Priority of the email
-        Priority = MimeKit.MessagePriority.Urgent
+        Priority = MimeKit.MessagePriority.Urgent,
+        // Reply-to address
+        ReplyTo = ["replyto@example.com"]
     };
 ```
+
+Or if you want to supply your own SmtpClient, you can do so. This is useful if you want to use a custom SmtpClient with specific settings:
+
+```csharp
+    // Create a new email
+    Email email = new Email(new SmtpClient())
+    {
+        // Email address to send the email from
+        From = "system@example.com",
+        ...
+    };
+```
+
+Note that the SmtpClient instance is not disposed of by SimpleMail, so you will need to dispose of it yourself when you are done with it.
+    
 
 3. Send the email:
 

@@ -23,7 +23,13 @@ namespace SimpleMail
     /// <summary>
     /// Attachment for the message
     /// </summary>
-    public class Attachment
+    /// <remarks>
+    /// Initializes a new instance of the <see cref="Attachment"/> class.
+    /// </remarks>
+    /// <param name="fileName">Name of the file.</param>
+    /// <param name="mimeType">Type of the MIME.</param>
+    /// <param name="content">The content.</param>
+    public class Attachment(string fileName, string mimeType, Stream content)
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Attachment"/> class.
@@ -37,42 +43,28 @@ namespace SimpleMail
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Attachment"/> class.
-        /// </summary>
-        /// <param name="fileName">Name of the file.</param>
-        /// <param name="mimeType">Type of the MIME.</param>
-        /// <param name="content">The content.</param>
-        public Attachment(string fileName, string mimeType, Stream content)
-        {
-            FileName = fileName;
-            MimeType = mimeType;
-            Content = content;
-            ContentId = MimeUtils.GenerateMessageId();
-        }
-
-        /// <summary>
         /// Gets the content.
         /// </summary>
         /// <value>The content.</value>
-        public Stream Content { get; }
+        public Stream Content { get; } = content;
 
         /// <summary>
         /// Gets or sets the content identifier (used for embedding images, etc.).
         /// </summary>
         /// <value>The content identifier.</value>
-        public string ContentId { get; set; }
+        public string ContentId { get; set; } = MimeUtils.GenerateMessageId();
 
         /// <summary>
         /// Gets the name of the file.
         /// </summary>
         /// <value>The name of the file.</value>
-        public string FileName { get; }
+        public string FileName { get; } = fileName;
 
         /// <summary>
         /// Gets the type of the MIME.
         /// </summary>
         /// <value>The type of the MIME.</value>
-        public string MimeType { get; }
+        public string MimeType { get; } = mimeType;
 
         /// <summary>
         /// Converts this instance.

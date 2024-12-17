@@ -28,37 +28,54 @@ namespace SimpleMail
     /// <summary>
     /// The class used to send an email.
     /// </summary>
-    public class Email
+    /// <remarks>
+    /// Initializes a new instance of the <see cref="Email"/> class with the specified SMTP client.
+    /// </remarks>
+    /// <param name="client">The SMTP client to use for sending emails. If null, a new instance of <see cref="SmtpClient"/> will be created.</param>
+    public class Email(SmtpClient? client) : IDisposable
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Email"/> class.
+        /// </summary>
+        public Email()
+            : this(null)
+        {
+        }
+
+        /// <summary>
+        /// Determines if the client is externally owned (don't dispose if it is)
+        /// </summary>
+        private readonly bool _ClientExternallyOwned = client is not null;
+
         /// <summary>
         /// Gets the attachments.
         /// </summary>
         /// <value>The attachments.</value>
-        public List<Attachment> Attachments { get; } = new List<Attachment>();
+        public List<Attachment> Attachments { get; } = [];
 
         /// <summary>
         /// Gets or sets the BCC.
         /// </summary>
         /// <value>The BCC.</value>
-        public string Bcc { get; set; }
+        public List<MailBox> Bcc { get; set; } = [];
 
         /// <summary>
         /// Gets or sets the body.
         /// </summary>
         /// <value>The body.</value>
-        public string Body { get; set; }
+        public string? Body { get; set; }
 
         /// <summary>
         /// Gets or sets the cc.
         /// </summary>
         /// <value>The cc.</value>
-        public string Cc { get; set; }
+        public List<MailBox> Cc { get; set; } = [];
 
         /// <summary>
         /// Gets or sets from.
         /// </summary>
         /// <value>From.</value>
-        public string From { get; set; }
+        public MailBox? From { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether to [ignore server certificate issues].
@@ -72,13 +89,13 @@ namespace SimpleMail
         /// Gets or sets the local domain.
         /// </summary>
         /// <value>The local domain.</value>
-        public string LocalDomain { get; set; }
+        public string? LocalDomain { get; set; }
 
         /// <summary>
         /// Gets or sets the password.
         /// </summary>
         /// <value>The password.</value>
-        public string Password { get; set; }
+        public string? Password { get; set; }
 
         /// <summary>
         /// Gets or sets the port.
@@ -93,28 +110,34 @@ namespace SimpleMail
         public MessagePriority Priority { get; set; } = MessagePriority.Normal;
 
         /// <summary>
+        /// Gets or sets the reply-to address.
+        /// </summary>
+        /// <value>The reply-to address.</value>
+        public List<MailBox> ReplyTo { get; set; } = [];
+
+        /// <summary>
         /// Gets or sets the server.
         /// </summary>
         /// <value>The server.</value>
-        public string Server { get; set; }
+        public string? Server { get; set; }
 
         /// <summary>
         /// Gets or sets the subject.
         /// </summary>
         /// <value>The subject.</value>
-        public string Subject { get; set; }
+        public string? Subject { get; set; }
 
         /// <summary>
         /// Gets or sets to.
         /// </summary>
         /// <value>To.</value>
-        public string To { get; set; }
+        public List<MailBox> To { get; set; } = [];
 
         /// <summary>
         /// Gets or sets the name of the user.
         /// </summary>
         /// <value>The name of the user.</value>
-        public string UserName { get; set; }
+        public string? UserName { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether [use SSL].
@@ -123,32 +146,42 @@ namespace SimpleMail
         public bool UseSSL { get; set; }
 
         /// <summary>
-        /// Gets or sets the reply-to address.
+        /// Gets or sets the SMTP client.
         /// </summary>
-        /// <value>The reply-to address.</value>
-        public string ReplyTo { get; set; }
+        private SmtpClient? SmtpClient { get; set; } = client ?? new SmtpClient();
+
+        /// <summary>
+        /// Releases the resources used by the <see cref="Email"/> class.
+        /// </summary>
+        /// <remarks>
+        /// If the SMTP client is externally owned, it will not be disposed.
+        /// </remarks>
+        public void Dispose()
+        {
+            if (_ClientExternallyOwned)
+                return;
+
+            SmtpClient?.Dispose();
+            SmtpClient = null;
+
+            GC.SuppressFinalize(this);
+        }
 
         /// <summary>
         /// Sends this email
         /// </summary>
         public void Send()
         {
-            var Message = SetupMessage();
-            using (var Client = new SmtpClient())
+            if (SmtpClient is null)
             {
-                if (IgnoreServerCertificateIssues)
-                {
-                    Client.ServerCertificateValidationCallback = (object _, X509Certificate __, X509Chain ___, SslPolicyErrors ____) => true;
-                }
-                Client.LocalDomain = LocalDomain;
-                Client.Connect(Server, Port, UseSSL);
-                if (!string.IsNullOrEmpty(UserName))
-                {
-                    Client.Authenticate(UserName, Password);
-                }
-                Client.Send(Message);
-                Client.Disconnect(true);
+                throw new InvalidOperationException("The SMTP client is null.");
             }
+            MimeMessage Message = SetupMessage();
+            SetClientSettings(SmtpClient);
+            Connect();
+            Authenticate();
+            _ = SmtpClient.Send(Message);
+            Disconnect();
         }
 
         /// <summary>
@@ -157,38 +190,99 @@ namespace SimpleMail
         /// <returns>The resulting Task</returns>
         public async Task SendAsync()
         {
-            var Message = SetupMessage();
-            using (var Client = new SmtpClient())
+            if (SmtpClient is null)
             {
-                if (IgnoreServerCertificateIssues)
-                {
-                    Client.ServerCertificateValidationCallback = (object _, X509Certificate __, X509Chain ___, SslPolicyErrors ____) => true;
-                }
-                Client.LocalDomain = LocalDomain;
-                await Client.ConnectAsync(Server, Port, UseSSL).ConfigureAwait(false);
-                if (!string.IsNullOrEmpty(UserName))
-                {
-                    await Client.AuthenticateAsync(UserName, Password).ConfigureAwait(false);
-                }
-                await Client.SendAsync(Message).ConfigureAwait(false);
-                await Client.DisconnectAsync(true).ConfigureAwait(false);
+                throw new InvalidOperationException("The SMTP client is null.");
+            }
+            MimeMessage Message = SetupMessage();
+            SetClientSettings(SmtpClient);
+            await ConnectAsync().ConfigureAwait(false);
+            await AuthenticateAsync().ConfigureAwait(false);
+            _ = await SmtpClient.SendAsync(Message).ConfigureAwait(false);
+            await DisconnectAsync().ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// Adds a list of mailboxes to the specified InternetAddressList.
+        /// </summary>
+        /// <param name="list">The InternetAddressList to add the mailboxes to.</param>
+        /// <param name="addressesToAdd">The list of MailBox objects to add to the InternetAddressList.</param>
+        private static void AddMailboxesToList(InternetAddressList list, List<MailBox> addressesToAdd)
+        {
+            if (list is null || addressesToAdd is null)
+                return;
+            foreach (MailBox TempAddress in addressesToAdd)
+            {
+                list.Add(TempAddress.MailboxAddress);
             }
         }
 
         /// <summary>
-        /// Splits the recipients.
+        /// Authenticates the client.
         /// </summary>
-        /// <param name="list">The list.</param>
-        /// <param name="mailboxes">The mailboxes.</param>
-        private static void SplitRecipients(InternetAddressList list, string mailboxes)
+        private void Authenticate()
         {
-            if (string.IsNullOrEmpty(mailboxes) || list is null)
+            if (string.IsNullOrEmpty(UserName) || SmtpClient?.IsAuthenticated != false)
                 return;
-            var SplitMailboxes = mailboxes?.Split(new string[] { ",", ";" }, StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
-            for (int i = 0; i < SplitMailboxes.Length; i++)
+            SmtpClient.Authenticate(UserName, Password);
+        }
+
+        /// <summary>
+        /// Authenticates the client asynchronously.
+        /// </summary>
+        /// <returns>The resulting Task</returns>
+        private Task AuthenticateAsync()
+        {
+            return string.IsNullOrEmpty(UserName) || SmtpClient?.IsAuthenticated != false
+                ? Task.CompletedTask
+                : SmtpClient.AuthenticateAsync(UserName, Password);
+        }
+
+        /// <summary>
+        /// Connects the client.
+        /// </summary>
+        private void Connect()
+        {
+            if (SmtpClient?.IsConnected != false)
+                return;
+            SmtpClient.Connect(Server, Port, UseSSL);
+        }
+
+        /// <summary>
+        /// Connects the client asynchronously.
+        /// </summary>
+        /// <returns>The resulting Task</returns>
+        private Task ConnectAsync() => SmtpClient?.IsConnected != false ? Task.CompletedTask : SmtpClient.ConnectAsync(Server, Port, UseSSL);
+
+        /// <summary>
+        /// Disconnects the client.
+        /// </summary>
+        private void Disconnect()
+        {
+            if (SmtpClient?.IsConnected != true || _ClientExternallyOwned)
+                return;
+            SmtpClient.Disconnect(true);
+        }
+
+        /// <summary>
+        /// Disconnects the client asynchronously.
+        /// </summary>
+        /// <returns>The resulting Task</returns>
+        private Task DisconnectAsync() => SmtpClient?.IsConnected != true || _ClientExternallyOwned ? Task.CompletedTask : SmtpClient.DisconnectAsync(true);
+
+        /// <summary>
+        /// Sets the client settings based on the current SMTP client configuration.
+        /// </summary>
+        /// <param name="client">The SMTP client to configure.</param>
+        private void SetClientSettings(SmtpClient? client)
+        {
+            if (client is null || _ClientExternallyOwned)
+                return;
+            if (IgnoreServerCertificateIssues)
             {
-                list.Add(new MailboxAddress("", SplitMailboxes[i]));
+                client.ServerCertificateValidationCallback = (object _, X509Certificate? __, X509Chain? ___, SslPolicyErrors ____) => true;
             }
+            client.LocalDomain = LocalDomain;
         }
 
         /// <summary>
@@ -203,14 +297,16 @@ namespace SimpleMail
                 Priority = Priority,
                 Importance = MessageImportance.Normal
             };
-            InternalMessage.From.Add(new MailboxAddress(string.Empty, From));
-            SplitRecipients(InternalMessage.To, To);
-            SplitRecipients(InternalMessage.Bcc, Bcc);
-            SplitRecipients(InternalMessage.Cc, Cc);
-            if (!string.IsNullOrEmpty(ReplyTo))
+            if (From is null)
             {
-                SplitRecipients(InternalMessage.ReplyTo, ReplyTo);
+                throw new ArgumentNullException(nameof(From));
             }
+            InternalMessage.From.Add(From.MailboxAddress);
+            Email.AddMailboxesToList(InternalMessage.To, To);
+            Email.AddMailboxesToList(InternalMessage.Cc, Cc);
+            Email.AddMailboxesToList(InternalMessage.Bcc, Bcc);
+            Email.AddMailboxesToList(InternalMessage.ReplyTo, ReplyTo);
+
             MimeEntity Content = new TextPart(TextFormat.Html) { Text = Body };
             if (Attachments.Count > 0)
             {
@@ -219,13 +315,21 @@ namespace SimpleMail
                     Content
                 };
                 Content = TempContent;
-                foreach (var Attachment in Attachments)
+                foreach (Attachment Attachment in Attachments)
                 {
                     TempContent.Add(Attachment.Convert());
                 }
             }
             InternalMessage.Body = Content;
             return InternalMessage;
+        }
+
+        /// <summary>
+        /// Releases unmanaged and - optionally - managed resources.
+        /// </summary>
+        ~Email()
+        {
+            Dispose();
         }
     }
 }

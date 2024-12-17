@@ -3,7 +3,7 @@
     /// <summary>
     /// Example program to send an email using SimpleMail
     /// </summary>
-    internal class Program
+    internal static class Program
     {
         /// <summary>
         /// Defines the entry point of the application.
@@ -12,12 +12,12 @@
         private static async Task Main(string[] args)
         {
             // Create a new email
-            Email email = new Email
+            var email = new Email
             {
                 // Email address to send the email from
                 From = "system@example.com",
                 // Email address to send the email to
-                To = "someone@example.com",
+                To = ["someone@example.com"],
                 // Subject of the email
                 Subject = "Example Subject",
                 // Body of the email
@@ -35,7 +35,7 @@
                 // Priority of the email
                 Priority = MimeKit.MessagePriority.Urgent,
                 // Reply-to address
-                ReplyTo = "replyto@example.com"
+                ReplyTo = ["replyto@example.com"]
             };
             // Send the email
             await email.SendAsync().ConfigureAwait(false);
