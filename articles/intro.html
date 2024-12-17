@@ -92,7 +92,7 @@
     /// &lt;summary&gt;
     /// Example program to send an email using SimpleMail
     /// &lt;/summary&gt;
-    internal class Program
+    internal static class Program
     {
         /// &lt;summary&gt;
         /// Defines the entry point of the application.
@@ -101,12 +101,12 @@
         private static async Task Main(string[] args)
         {
             // Create a new email
-            Email email = new Email
+            var email = new Email
             {
                 // Email address to send the email from
                 From = &quot;system@example.com&quot;,
                 // Email address to send the email to
-                To = &quot;someone@example.com&quot;,
+                To = [&quot;someone@example.com&quot;],
                 // Subject of the email
                 Subject = &quot;Example Subject&quot;,
                 // Body of the email
@@ -122,7 +122,9 @@
                 // Use SSL to encrypt the connection
                 UseSSL = true,
                 // Priority of the email
-                Priority = MimeKit.MessagePriority.Urgent
+                Priority = MimeKit.MessagePriority.Urgent,
+                // Reply-to address
+                ReplyTo = [&quot;replyto@example.com&quot;]
             };
             // Send the email
             await email.SendAsync().ConfigureAwait(false);

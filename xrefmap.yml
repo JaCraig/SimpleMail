@@ -99,6 +99,34 @@ references:
   commentId: T:SimpleMail.Email
   fullName: SimpleMail.Email
   nameWithType: Email
+- uid: SimpleMail.Email.#ctor
+  name: Email()
+  href: api/SimpleMail.Email.html#SimpleMail_Email__ctor
+  commentId: M:SimpleMail.Email.#ctor
+  name.vb: New()
+  fullName: SimpleMail.Email.Email()
+  fullName.vb: SimpleMail.Email.New()
+  nameWithType: Email.Email()
+  nameWithType.vb: Email.New()
+- uid: SimpleMail.Email.#ctor(MailKit.Net.Smtp.SmtpClient)
+  name: Email(SmtpClient?)
+  href: api/SimpleMail.Email.html#SimpleMail_Email__ctor_MailKit_Net_Smtp_SmtpClient_
+  commentId: M:SimpleMail.Email.#ctor(MailKit.Net.Smtp.SmtpClient)
+  name.vb: New(SmtpClient)
+  fullName: SimpleMail.Email.Email(MailKit.Net.Smtp.SmtpClient?)
+  fullName.vb: SimpleMail.Email.New(MailKit.Net.Smtp.SmtpClient)
+  nameWithType: Email.Email(SmtpClient?)
+  nameWithType.vb: Email.New(SmtpClient)
+- uid: SimpleMail.Email.#ctor*
+  name: Email
+  href: api/SimpleMail.Email.html#SimpleMail_Email__ctor_
+  commentId: Overload:SimpleMail.Email.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: SimpleMail.Email.Email
+  fullName.vb: SimpleMail.Email.New
+  nameWithType: Email.Email
+  nameWithType.vb: Email.New
 - uid: SimpleMail.Email.Attachments
   name: Attachments
   href: api/SimpleMail.Email.html#SimpleMail_Email_Attachments
@@ -151,6 +179,35 @@ references:
   isSpec: "True"
   fullName: SimpleMail.Email.Cc
   nameWithType: Email.Cc
+- uid: SimpleMail.Email.Dispose
+  name: Dispose()
+  href: api/SimpleMail.Email.html#SimpleMail_Email_Dispose
+  commentId: M:SimpleMail.Email.Dispose
+  fullName: SimpleMail.Email.Dispose()
+  nameWithType: Email.Dispose()
+- uid: SimpleMail.Email.Dispose*
+  name: Dispose
+  href: api/SimpleMail.Email.html#SimpleMail_Email_Dispose_
+  commentId: Overload:SimpleMail.Email.Dispose
+  isSpec: "True"
+  fullName: SimpleMail.Email.Dispose
+  nameWithType: Email.Dispose
+- uid: SimpleMail.Email.Finalize
+  name: ~Email()
+  href: api/SimpleMail.Email.html#SimpleMail_Email_Finalize
+  commentId: M:SimpleMail.Email.Finalize
+  name.vb: ''
+  fullName: SimpleMail.Email.~Email()
+  fullName.vb: ''
+  nameWithType: Email.~Email()
+  nameWithType.vb: ''
+- uid: SimpleMail.Email.Finalize*
+  name: ~Email
+  href: api/SimpleMail.Email.html#SimpleMail_Email_Finalize_
+  commentId: Overload:SimpleMail.Email.Finalize
+  isSpec: "True"
+  fullName: SimpleMail.Email.~Email
+  nameWithType: Email.~Email
 - uid: SimpleMail.Email.From
   name: From
   href: api/SimpleMail.Email.html#SimpleMail_Email_From
@@ -229,6 +286,19 @@ references:
   isSpec: "True"
   fullName: SimpleMail.Email.Priority
   nameWithType: Email.Priority
+- uid: SimpleMail.Email.ReplyTo
+  name: ReplyTo
+  href: api/SimpleMail.Email.html#SimpleMail_Email_ReplyTo
+  commentId: P:SimpleMail.Email.ReplyTo
+  fullName: SimpleMail.Email.ReplyTo
+  nameWithType: Email.ReplyTo
+- uid: SimpleMail.Email.ReplyTo*
+  name: ReplyTo
+  href: api/SimpleMail.Email.html#SimpleMail_Email_ReplyTo_
+  commentId: Overload:SimpleMail.Email.ReplyTo
+  isSpec: "True"
+  fullName: SimpleMail.Email.ReplyTo
+  nameWithType: Email.ReplyTo
 - uid: SimpleMail.Email.Send
   name: Send()
   href: api/SimpleMail.Email.html#SimpleMail_Email_Send
@@ -320,3 +390,95 @@ references:
   isSpec: "True"
   fullName: SimpleMail.Email.UserName
   nameWithType: Email.UserName
+- uid: SimpleMail.MailBox
+  name: MailBox
+  href: api/SimpleMail.MailBox.html
+  commentId: T:SimpleMail.MailBox
+  fullName: SimpleMail.MailBox
+  nameWithType: MailBox
+- uid: SimpleMail.MailBox.#ctor(System.String)
+  name: MailBox(string)
+  href: api/SimpleMail.MailBox.html#SimpleMail_MailBox__ctor_System_String_
+  commentId: M:SimpleMail.MailBox.#ctor(System.String)
+  name.vb: New(String)
+  fullName: SimpleMail.MailBox.MailBox(string)
+  fullName.vb: SimpleMail.MailBox.New(String)
+  nameWithType: MailBox.MailBox(string)
+  nameWithType.vb: MailBox.New(String)
+- uid: SimpleMail.MailBox.#ctor(System.String,System.String)
+  name: MailBox(string, string)
+  href: api/SimpleMail.MailBox.html#SimpleMail_MailBox__ctor_System_String_System_String_
+  commentId: M:SimpleMail.MailBox.#ctor(System.String,System.String)
+  name.vb: New(String, String)
+  fullName: SimpleMail.MailBox.MailBox(string, string)
+  fullName.vb: SimpleMail.MailBox.New(String, String)
+  nameWithType: MailBox.MailBox(string, string)
+  nameWithType.vb: MailBox.New(String, String)
+- uid: SimpleMail.MailBox.#ctor*
+  name: MailBox
+  href: api/SimpleMail.MailBox.html#SimpleMail_MailBox__ctor_
+  commentId: Overload:SimpleMail.MailBox.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: SimpleMail.MailBox.MailBox
+  fullName.vb: SimpleMail.MailBox.New
+  nameWithType: MailBox.MailBox
+  nameWithType.vb: MailBox.New
+- uid: SimpleMail.MailBox.DisplayName
+  name: DisplayName
+  href: api/SimpleMail.MailBox.html#SimpleMail_MailBox_DisplayName
+  commentId: P:SimpleMail.MailBox.DisplayName
+  fullName: SimpleMail.MailBox.DisplayName
+  nameWithType: MailBox.DisplayName
+- uid: SimpleMail.MailBox.DisplayName*
+  name: DisplayName
+  href: api/SimpleMail.MailBox.html#SimpleMail_MailBox_DisplayName_
+  commentId: Overload:SimpleMail.MailBox.DisplayName
+  isSpec: "True"
+  fullName: SimpleMail.MailBox.DisplayName
+  nameWithType: MailBox.DisplayName
+- uid: SimpleMail.MailBox.EmailAddress
+  name: EmailAddress
+  href: api/SimpleMail.MailBox.html#SimpleMail_MailBox_EmailAddress
+  commentId: P:SimpleMail.MailBox.EmailAddress
+  fullName: SimpleMail.MailBox.EmailAddress
+  nameWithType: MailBox.EmailAddress
+- uid: SimpleMail.MailBox.EmailAddress*
+  name: EmailAddress
+  href: api/SimpleMail.MailBox.html#SimpleMail_MailBox_EmailAddress_
+  commentId: Overload:SimpleMail.MailBox.EmailAddress
+  isSpec: "True"
+  fullName: SimpleMail.MailBox.EmailAddress
+  nameWithType: MailBox.EmailAddress
+- uid: SimpleMail.MailBox.ToString
+  name: ToString()
+  href: api/SimpleMail.MailBox.html#SimpleMail_MailBox_ToString
+  commentId: M:SimpleMail.MailBox.ToString
+  fullName: SimpleMail.MailBox.ToString()
+  nameWithType: MailBox.ToString()
+- uid: SimpleMail.MailBox.ToString*
+  name: ToString
+  href: api/SimpleMail.MailBox.html#SimpleMail_MailBox_ToString_
+  commentId: Overload:SimpleMail.MailBox.ToString
+  isSpec: "True"
+  fullName: SimpleMail.MailBox.ToString
+  nameWithType: MailBox.ToString
+- uid: SimpleMail.MailBox.op_Implicit(System.String)~SimpleMail.MailBox
+  name: implicit operator MailBox(string)
+  href: api/SimpleMail.MailBox.html#SimpleMail_MailBox_op_Implicit_System_String__SimpleMail_MailBox
+  commentId: M:SimpleMail.MailBox.op_Implicit(System.String)~SimpleMail.MailBox
+  name.vb: CType(String)
+  fullName: SimpleMail.MailBox.implicit operator SimpleMail.MailBox(string)
+  fullName.vb: SimpleMail.MailBox.CType(String)
+  nameWithType: MailBox.implicit operator MailBox(string)
+  nameWithType.vb: MailBox.CType(String)
+- uid: SimpleMail.MailBox.op_Implicit*
+  name: implicit operator
+  href: api/SimpleMail.MailBox.html#SimpleMail_MailBox_op_Implicit_
+  commentId: Overload:SimpleMail.MailBox.op_Implicit
+  isSpec: "True"
+  name.vb: CType
+  fullName: SimpleMail.MailBox.implicit operator
+  fullName.vb: SimpleMail.MailBox.CType
+  nameWithType: MailBox.implicit operator
+  nameWithType.vb: MailBox.CType

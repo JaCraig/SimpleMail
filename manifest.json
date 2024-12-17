@@ -32,6 +32,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/SimpleMail.MailBox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SimpleMail.MailBox.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/SimpleMail.yml",
       "output": {
         ".html": {
