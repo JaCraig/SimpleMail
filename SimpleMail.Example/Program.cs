@@ -33,7 +33,9 @@
                 // Use SSL to encrypt the connection
                 UseSSL = true,
                 // Priority of the email
-                Priority = MimeKit.MessagePriority.Urgent
+                Priority = MimeKit.MessagePriority.Urgent,
+                // Reply-to address
+                ReplyTo = "replyto@example.com"
             };
             // Send the email
             await email.SendAsync().ConfigureAwait(false);

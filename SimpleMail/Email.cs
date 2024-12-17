@@ -1,4 +1,4 @@
-﻿/*
+/*
 Copyright 2016 James Craig
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -123,6 +123,12 @@ namespace SimpleMail
         public bool UseSSL { get; set; }
 
         /// <summary>
+        /// Gets or sets the reply-to address.
+        /// </summary>
+        /// <value>The reply-to address.</value>
+        public string ReplyTo { get; set; }
+
+        /// <summary>
         /// Sends this email
         /// </summary>
         public void Send()
@@ -201,6 +207,10 @@ namespace SimpleMail
             SplitRecipients(InternalMessage.To, To);
             SplitRecipients(InternalMessage.Bcc, Bcc);
             SplitRecipients(InternalMessage.Cc, Cc);
+            if (!string.IsNullOrEmpty(ReplyTo))
+            {
+                SplitRecipients(InternalMessage.ReplyTo, ReplyTo);
+            }
             MimeEntity Content = new TextPart(TextFormat.Html) { Text = Body };
             if (Attachments.Count > 0)
             {
