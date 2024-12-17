@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="5.0.0"></a>
+## [5.0.0](https://www.github.com/JaCraig/SimpleMail/releases/tag/v5.0.0) (2024-12-17)
+
+### Features
+
+* **email:** enhance Email class and refactor Attachment ([71ccd79](https://www.github.com/JaCraig/SimpleMail/commit/71ccd79244c965168bdf83584e798edd3c226e9e))
+
+### Breaking Changes
+
+* **email:** enhance Email class and refactor Attachment ([71ccd79](https://www.github.com/JaCraig/SimpleMail/commit/71ccd79244c965168bdf83584e798edd3c226e9e))
+
+### Other
+
+* Add optional ReplyTo field to Email class ([2223b45](https://www.github.com/JaCraig/SimpleMail/commit/2223b4597297c7807b9452baf9eb5425eda727f9))
+* Merge branch 'master' of https://github.com/JaCraig/SimpleMail ([0991c55](https://www.github.com/JaCraig/SimpleMail/commit/0991c55b6a67ed9a2dfca3c8f1758d700a2c85b2))
+* Merge pull request #69 from JaCraig/dependabot/nuget/SimpleMail.Tests/dependencies-617062173c ([e317078](https://www.github.com/JaCraig/SimpleMail/commit/e317078810ba30bc65cf58d427f53833c36aad6a))
+* Merge pull request #70 from JaCraig/dependabot/nuget/SimpleMail.Example/dependencies-0eb5dce03c ([73ca644](https://www.github.com/JaCraig/SimpleMail/commit/73ca644735d1a4ad3c7303aa8ef72488d686907e))
+* Merge pull request #71 from JaCraig/dependabot/nuget/SimpleMail.Tests/dependencies-0e1e3a57fb ([d4e4d1c](https://www.github.com/JaCraig/SimpleMail/commit/d4e4d1cc09f9d02a4be69fe71793084dba6a45d4))
+* Merge pull request #72 from JaCraig/dependabot/nuget/SimpleMail.Tests/dependencies-637ad84d5b ([3007bbe](https://www.github.com/JaCraig/SimpleMail/commit/3007bbebea89969219850568c88ae6c6f7998742))
+* bump husky in /SimpleMail.Example in the dependencies group ([f83b365](https://www.github.com/JaCraig/SimpleMail/commit/f83b365a6689fa488806fa1131c39d58b33c4bef))
+* bump MailKit in /SimpleMail.Tests in the dependencies group ([007a557](https://www.github.com/JaCraig/SimpleMail/commit/007a557920227b7d23673cd96d6ef767ce828c1f))
+* bump Microsoft.NET.Test.Sdk ([8641a82](https://www.github.com/JaCraig/SimpleMail/commit/8641a82c28c78a29a8f9a697850cd06a172af84f))
+* bump xunit.runner.visualstudio ([ae00b8b](https://www.github.com/JaCraig/SimpleMail/commit/ae00b8b599777e087b29f8e6cd5e6cd0ee1716d4))
+* update file paths in documentation and configuration ([4fb094b](https://www.github.com/JaCraig/SimpleMail/commit/4fb094bdfa89fc618b1c85fbda4fd2e532201866))
+* update husky and versionize tool versions to latest ([6b89d1d](https://www.github.com/JaCraig/SimpleMail/commit/6b89d1db599ddde3acd9f1d331a1703d8d8ce478))
+
 <a name="4.0.1"></a>
 ## [4.0.1](https://www.github.com/JaCraig/SimpleMail/releases/tag/v4.0.1) (2024-11-19)
 
