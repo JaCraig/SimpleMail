@@ -198,7 +198,7 @@ Class Attachment  <a class="header-action link-secondary" title="View source" hr
   <a id="SimpleMail_Attachment__ctor_" data-uid="SimpleMail.Attachment.#ctor*"></a>
 
   <h3 id="SimpleMail_Attachment__ctor_System_String_System_String_System_IO_Stream_" data-uid="SimpleMail.Attachment.#ctor(System.String,System.String,System.IO.Stream)">
-  Attachment(string, string, Stream)
+  Attachment(string?, string?, Stream?)
   <a class="header-action link-secondary" title="View source" href="https://github.com/JaCraig/SimpleMail/blob/master/SimpleMail/Attachment.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
@@ -207,7 +207,7 @@ Class Attachment  <a class="header-action link-secondary" title="View source" hr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Attachment(string fileName, string mimeType, Stream content)</code></pre>
+    <pre><code class="lang-csharp hljs">public Attachment(string? fileName, string? mimeType, Stream? content)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -253,7 +253,7 @@ Class Attachment  <a class="header-action link-secondary" title="View source" hr
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Stream Content { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Stream? Content { get; }</code></pre>
   </div>
 
 

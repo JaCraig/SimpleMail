@@ -23,13 +23,13 @@ references:
   nameWithType: Attachment.Attachment(string, string, byte[])
   nameWithType.vb: Attachment.New(String, String, Byte())
 - uid: SimpleMail.Attachment.#ctor(System.String,System.String,System.IO.Stream)
-  name: Attachment(string, string, Stream)
+  name: Attachment(string?, string?, Stream?)
   href: api/SimpleMail.Attachment.html#SimpleMail_Attachment__ctor_System_String_System_String_System_IO_Stream_
   commentId: M:SimpleMail.Attachment.#ctor(System.String,System.String,System.IO.Stream)
   name.vb: New(String, String, Stream)
-  fullName: SimpleMail.Attachment.Attachment(string, string, System.IO.Stream)
+  fullName: SimpleMail.Attachment.Attachment(string?, string?, System.IO.Stream?)
   fullName.vb: SimpleMail.Attachment.New(String, String, System.IO.Stream)
-  nameWithType: Attachment.Attachment(string, string, Stream)
+  nameWithType: Attachment.Attachment(string?, string?, Stream?)
   nameWithType.vb: Attachment.New(String, String, Stream)
 - uid: SimpleMail.Attachment.#ctor*
   name: Attachment
