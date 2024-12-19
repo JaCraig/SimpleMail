@@ -13,6 +13,9 @@ namespace SimpleMail
         /// <param name="emailAddress">The email address of the mailbox.</param>
         public MailBox(string emailAddress)
         {
+            emailAddress ??= emailAddress?.Trim() ?? "";
+            if (string.IsNullOrWhiteSpace(emailAddress))
+                return;
             // Check to see if we can parse display name from the email address (e.g. "John Doe <jdoe@example.com>")
             MailboxAddress = MailboxAddress.Parse(emailAddress);
         }
@@ -24,6 +27,10 @@ namespace SimpleMail
         /// <param name="emailAddress">The email address of the mailbox.</param>
         public MailBox(string displayName, string emailAddress)
         {
+            displayName ??= displayName?.Trim() ?? "";
+            emailAddress ??= emailAddress?.Trim() ?? "";
+            if (string.IsNullOrWhiteSpace(emailAddress))
+                return;
             MailboxAddress = new MailboxAddress(displayName, emailAddress);
         }
 

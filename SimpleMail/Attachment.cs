@@ -29,7 +29,7 @@ namespace SimpleMail
     /// <param name="fileName">Name of the file.</param>
     /// <param name="mimeType">Type of the MIME.</param>
     /// <param name="content">The content.</param>
-    public class Attachment(string fileName, string mimeType, Stream content)
+    public class Attachment(string? fileName, string? mimeType, Stream? content)
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Attachment"/> class.
@@ -38,7 +38,7 @@ namespace SimpleMail
         /// <param name="mimeType">Type of the MIME.</param>
         /// <param name="content">The content.</param>
         public Attachment(string fileName, string mimeType, byte[] content)
-            : this(fileName, mimeType, new MemoryStream(content))
+            : this(fileName, mimeType, content is null ? null : new MemoryStream(content))
         {
         }
 
@@ -46,7 +46,7 @@ namespace SimpleMail
         /// Gets the content.
         /// </summary>
         /// <value>The content.</value>
-        public Stream Content { get; } = content;
+        public Stream? Content { get; } = content;
 
         /// <summary>
         /// Gets or sets the content identifier (used for embedding images, etc.).
@@ -58,13 +58,13 @@ namespace SimpleMail
         /// Gets the name of the file.
         /// </summary>
         /// <value>The name of the file.</value>
-        public string FileName { get; } = fileName;
+        public string FileName { get; } = fileName ?? "Attachment";
 
         /// <summary>
         /// Gets the type of the MIME.
         /// </summary>
         /// <value>The type of the MIME.</value>
-        public string MimeType { get; } = mimeType;
+        public string MimeType { get; } = mimeType ?? "application/octet-stream";
 
         /// <summary>
         /// Converts this instance.

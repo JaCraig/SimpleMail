@@ -173,10 +173,12 @@ namespace SimpleMail
         public void Send()
         {
             if (SmtpClient is null)
-            {
                 throw new InvalidOperationException("The SMTP client is null.");
-            }
+            if (From is null)
+                throw new InvalidOperationException("No sender specified.");
             MimeMessage Message = SetupMessage();
+            if (Message.To.Count == 0 && Message.Cc.Count == 0 && Message.Bcc.Count == 0)
+                throw new InvalidOperationException("No valid recipients specified.");
             SetClientSettings(SmtpClient);
             Connect();
             Authenticate();
@@ -191,10 +193,12 @@ namespace SimpleMail
         public async Task SendAsync()
         {
             if (SmtpClient is null)
-            {
                 throw new InvalidOperationException("The SMTP client is null.");
-            }
+            if (From is null)
+                throw new InvalidOperationException("No sender specified.");
             MimeMessage Message = SetupMessage();
+            if (Message.To.Count == 0 && Message.Cc.Count == 0 && Message.Bcc.Count == 0)
+                throw new InvalidOperationException("No valid recipients specified.");
             SetClientSettings(SmtpClient);
             await ConnectAsync().ConfigureAwait(false);
             await AuthenticateAsync().ConfigureAwait(false);
@@ -213,6 +217,8 @@ namespace SimpleMail
                 return;
             foreach (MailBox TempAddress in addressesToAdd)
             {
+                if (TempAddress.MailboxAddress is null)
+                    continue;
                 list.Add(TempAddress.MailboxAddress);
             }
         }
