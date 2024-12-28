@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="5.1.1"></a>
+## [5.1.1](https://www.github.com/JaCraig/SimpleMail/releases/tag/v5.1.1) (2024-12-28)
+
+### Bug Fixes
+
+* **email:** improve readability and add cleanup method ([8d7e83c](https://www.github.com/JaCraig/SimpleMail/commit/8d7e83c5e41b1833d1c7bd38ffaa3b5b6b2112d4))
+
 <a name="5.1.0"></a>
 ## [5.1.0](https://www.github.com/JaCraig/SimpleMail/releases/tag/v5.1.0) (2024-12-19)
 
