@@ -31,7 +31,10 @@ namespace SimpleMail
     /// <remarks>
     /// Initializes a new instance of the <see cref="Email"/> class with the specified SMTP client.
     /// </remarks>
-    /// <param name="client">The SMTP client to use for sending emails. If null, a new instance of <see cref="SmtpClient"/> will be created.</param>
+    /// <param name="client">
+    /// The SMTP client to use for sending emails. If null, a new instance of <see
+    /// cref="SmtpClient"/> will be created.
+    /// </param>
     public class Email(SmtpClient? client) : IDisposable
     {
         /// <summary>
@@ -41,11 +44,6 @@ namespace SimpleMail
             : this(null)
         {
         }
-
-        /// <summary>
-        /// Determines if the client is externally owned (don't dispose if it is)
-        /// </summary>
-        private readonly bool _ClientExternallyOwned = client is not null;
 
         /// <summary>
         /// Gets the attachments.
@@ -80,9 +78,7 @@ namespace SimpleMail
         /// <summary>
         /// Gets or sets a value indicating whether to [ignore server certificate issues].
         /// </summary>
-        /// <value>
-        ///   <c>true</c> if it should [ignore server certificate issues]; otherwise, <c>false</c>.
-        /// </value>
+        /// <value><c>true</c> if it should [ignore server certificate issues]; otherwise, <c>false</c>.</value>
         public bool IgnoreServerCertificateIssues { get; set; }
 
         /// <summary>
@@ -151,11 +147,14 @@ namespace SimpleMail
         private SmtpClient? SmtpClient { get; set; } = client ?? new SmtpClient();
 
         /// <summary>
+        /// Determines if the client is externally owned (don't dispose if it is)
+        /// </summary>
+        private readonly bool _ClientExternallyOwned = client is not null;
+
+        /// <summary>
         /// Releases the resources used by the <see cref="Email"/> class.
         /// </summary>
-        /// <remarks>
-        /// If the SMTP client is externally owned, it will not be disposed.
-        /// </remarks>
+        /// <remarks>If the SMTP client is externally owned, it will not be disposed.</remarks>
         public void Dispose()
         {
             if (_ClientExternallyOwned)
@@ -184,6 +183,7 @@ namespace SimpleMail
             Authenticate();
             _ = SmtpClient.Send(Message);
             Disconnect();
+            CleanupClient();
         }
 
         /// <summary>
@@ -204,6 +204,7 @@ namespace SimpleMail
             await AuthenticateAsync().ConfigureAwait(false);
             _ = await SmtpClient.SendAsync(Message).ConfigureAwait(false);
             await DisconnectAsync().ConfigureAwait(false);
+            CleanupClient();
         }
 
         /// <summary>
@@ -242,6 +243,22 @@ namespace SimpleMail
             return string.IsNullOrEmpty(UserName) || SmtpClient?.IsAuthenticated != false
                 ? Task.CompletedTask
                 : SmtpClient.AuthenticateAsync(UserName, Password);
+        }
+
+        /// <summary>
+        /// Cleans up the client. Clears out the To, Cc, Bcc, Attachments, and ReplyTo lists.
+        /// </summary>
+        private void CleanupClient()
+        {
+            if (_ClientExternallyOwned)
+                return;
+            To.Clear();
+            Cc.Clear();
+            Bcc.Clear();
+            Attachments.Clear();
+            ReplyTo.Clear();
+            Subject = "";
+            Body = "";
         }
 
         /// <summary>
