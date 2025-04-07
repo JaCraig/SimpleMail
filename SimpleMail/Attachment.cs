@@ -46,7 +46,7 @@ namespace SimpleMail
         /// Gets the content.
         /// </summary>
         /// <value>The content.</value>
-        public Stream? Content { get; } = content;
+        public Stream? Content { get; private set; } = content;
 
         /// <summary>
         /// Gets or sets the content identifier (used for embedding images, etc.).
@@ -58,13 +58,13 @@ namespace SimpleMail
         /// Gets the name of the file.
         /// </summary>
         /// <value>The name of the file.</value>
-        public string FileName { get; } = fileName ?? "Attachment";
+        public string FileName { get; private set; } = fileName ?? "Attachment";
 
         /// <summary>
         /// Gets the type of the MIME.
         /// </summary>
         /// <value>The type of the MIME.</value>
-        public string MimeType { get; } = mimeType ?? "application/octet-stream";
+        public string MimeType { get; private set; } = mimeType ?? "application/octet-stream";
 
         /// <summary>
         /// Converts this instance.
@@ -72,6 +72,11 @@ namespace SimpleMail
         /// <returns></returns>
         internal MimePart Convert()
         {
+            if (string.IsNullOrEmpty(MimeType))
+                MimeType = "application/octet-stream";
+            Content ??= new MemoryStream();
+            if (string.IsNullOrEmpty(FileName))
+                FileName = "Attachment";
             return new MimePart(MimeType)
             {
                 Content = new MimeContent(Content),
