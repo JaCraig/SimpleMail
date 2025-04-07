@@ -18,7 +18,11 @@
           "relative_path": "api/SimpleMail.Attachment.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SimpleMail.Attachment",
+      "Summary": "<p sourcefile=\"api/SimpleMail.Attachment.yml\" sourcestartlinenumber=\"1\">Attachment for the message</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -28,7 +32,11 @@
           "relative_path": "api/SimpleMail.Email.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SimpleMail.Email",
+      "Summary": "<p sourcefile=\"api/SimpleMail.Email.yml\" sourcestartlinenumber=\"1\">The class used to send an email.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -38,7 +46,11 @@
           "relative_path": "api/SimpleMail.MailBox.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SimpleMail.MailBox",
+      "Summary": "<p sourcefile=\"api/SimpleMail.MailBox.yml\" sourcestartlinenumber=\"1\">Represents a mailbox with an email address and an optional display name.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -48,7 +60,11 @@
           "relative_path": "api/SimpleMail.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SimpleMail",
+      "Summary": null
     },
     {
       "type": "Conceptual",
