@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="5.1.2"></a>
+## [5.1.2](https://www.github.com/JaCraig/SimpleMail/releases/tag/v5.1.2) (2025-04-07)
+
+### Bug Fixes
+
+* **attachment:** update properties with default values. ([6a71ee9](https://www.github.com/JaCraig/SimpleMail/commit/6a71ee9b5b5f5e1f46b83f5580707606dc992d33))
+
+### Other
+
+* Merge branch 'master' of https://github.com/JaCraig/SimpleMail ([6701c36](https://www.github.com/JaCraig/SimpleMail/commit/6701c36c4aa3162521787d0d62c84c1ac2f76cbc))
+* Merge pull request #74 from JaCraig/dependabot/nuget/SimpleMail.Tests/dependencies-37a7915f86 ([31bc503](https://www.github.com/JaCraig/SimpleMail/commit/31bc50324c598ed9ede8d7a93f0957bfb7e61098))
+* Merge pull request #75 from JaCraig/dependabot/nuget/SimpleMail.Tests/dependencies-dac939b906 ([a0e88fe](https://www.github.com/JaCraig/SimpleMail/commit/a0e88feb49ab06dd81f3c834f2be73c84941f9f7))
+* Merge pull request #76 from JaCraig/dependabot/nuget/SimpleMail.Tests/dependencies-955fcb2e58 ([f535da3](https://www.github.com/JaCraig/SimpleMail/commit/f535da3b82d1b08055f66c38ac58ad560302e0cf))
+* Merge pull request #77 from JaCraig/dependabot/nuget/SimpleMail.Tests/dependencies-293c44675e ([5c20838](https://www.github.com/JaCraig/SimpleMail/commit/5c20838d70d4375addb4edd29189c10b0cc4b5ca))
+* Merge pull request #78 from JaCraig/dependabot/nuget/SimpleMail.Example/dependencies-09f9a42fe8 ([dbb0f02](https://www.github.com/JaCraig/SimpleMail/commit/dbb0f0231f6e9b408fc80e35fd91986a8d295e90))
+* Merge pull request #79 from JaCraig/dependabot/nuget/SimpleMail.Tests/dependencies-836e21bf11 ([4e40feb](https://www.github.com/JaCraig/SimpleMail/commit/4e40febe592a0dcc31f8db1714898a07b5dbd10f))
+* Merge pull request #80 from JaCraig/dependabot/nuget/SimpleMail.Tests/dependencies-9fb64433f7 ([2ae40dd](https://www.github.com/JaCraig/SimpleMail/commit/2ae40dd94c0ac371af8d22a223ce63831417fb2c))
+* bump MailKit in /SimpleMail.Example in the dependencies group ([664d277](https://www.github.com/JaCraig/SimpleMail/commit/664d277bbc15acf9b50e7d9a0b5311b744d3efd0))
+* bump the dependencies group in /SimpleMail.Tests with 2 updates ([12b1040](https://www.github.com/JaCraig/SimpleMail/commit/12b1040e061db60ead263b4e9fab9c5761df24d2))
+* bump the dependencies group in /SimpleMail.Tests with 2 updates ([11d50ab](https://www.github.com/JaCraig/SimpleMail/commit/11d50abe29713f4928f4fa2051e660065a85dbe9))
+* bump versionize in /SimpleMail.Tests in the dependencies group ([0cf4817](https://www.github.com/JaCraig/SimpleMail/commit/0cf481761b5aafcc02ce8cf8e1bb8719fb1ffafc))
+* bump xunit in /SimpleMail.Tests in the dependencies group ([ab2067e](https://www.github.com/JaCraig/SimpleMail/commit/ab2067e05c9b06fd4cb9f310f5e68e66d23e9924))
+* bump xunit.runner.visualstudio ([457779b](https://www.github.com/JaCraig/SimpleMail/commit/457779bcc00a2635d1c142d59679b22f6d5c2f36))
+* bump xunit.runner.visualstudio ([7bd889d](https://www.github.com/JaCraig/SimpleMail/commit/7bd889d180a89c65d4298c9dde1fac1600e29e94))
+
 <a name="5.1.1"></a>
 ## [5.1.1](https://www.github.com/JaCraig/SimpleMail/releases/tag/v5.1.1) (2024-12-28)
 
