@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="5.1.3"></a>
+## [5.1.3](https://www.github.com/JaCraig/SimpleMail/releases/tag/v5.1.3) (2025-06-27)
+
+### Bug Fixes
+
+* **dependabot:** standardize patterns formatting ([ff901ab](https://www.github.com/JaCraig/SimpleMail/commit/ff901ab218f05f702c3636f5c1cb2d7691bd1f10))
+
 <a name="5.1.2"></a>
 ## [5.1.2](https://www.github.com/JaCraig/SimpleMail/releases/tag/v5.1.2) (2025-04-07)
 
