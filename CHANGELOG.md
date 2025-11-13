@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="5.1.6"></a>
+## [5.1.6](https://www.github.com/JaCraig/SimpleMail/releases/tag/v5.1.6) (2025-11-13)
+
+### Bug Fixes
+
+* Bump the dependencies group with 2 updates ([55fb5e7](https://www.github.com/JaCraig/SimpleMail/commit/55fb5e791fff6e4d18284f91b9ec1807b1c714f8))
+
+### Other
+
+* Merge pull request #93 from JaCraig/dependabot/nuget/dot-config/dependencies-c712425253 ([d99b194](https://www.github.com/JaCraig/SimpleMail/commit/d99b1949def15997bcdd7f7505a39fe74fe149ca))
+* Merge pull request #94 from JaCraig/dependabot/nuget/SimpleMail.Tests/dependencies-f078703165 ([9b52f6d](https://www.github.com/JaCraig/SimpleMail/commit/9b52f6d92441c3f7658b6343adf78b625fcbb83a))
+* Bump Microsoft.NET.Test.Sdk from 18.0.0 to 18.0.1 ([90390b9](https://www.github.com/JaCraig/SimpleMail/commit/90390b901b583142a954c7960d55ec212d378977))
+
 <a name="5.1.5"></a>
 ## [5.1.5](https://www.github.com/JaCraig/SimpleMail/releases/tag/v5.1.5) (2025-10-14)
 
