@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="5.1.7"></a>
+## [5.1.7](https://www.github.com/JaCraig/SimpleMail/releases/tag/v5.1.7) (2025-11-14)
+
+### Bug Fixes
+
+* Bump the dependencies group with 1 update ([20c096c](https://www.github.com/JaCraig/SimpleMail/commit/20c096cb3c952c313a5e78699a560b8c09a21e23))
+
+### Other
+
+* Merge pull request #91 from JaCraig/dependabot/nuget/SimpleMail.Tests/dependencies-f8dc83ce5f ([241c7d8](https://www.github.com/JaCraig/SimpleMail/commit/241c7d8fb857f674b74492f030bc98864a202c13))
+* Merge pull request #95 from JaCraig/dependabot/nuget/dot-config/dependencies-a36435e6a3 ([f2c519e](https://www.github.com/JaCraig/SimpleMail/commit/f2c519efd3db2c2f601c723bf6b0bfcb7ada0a14))
+* Merge pull request #97 from JaCraig/dependabot/nuget/dot-config/dependencies-a36435e6a3 ([95e03b1](https://www.github.com/JaCraig/SimpleMail/commit/95e03b111dfad8b41df0f308ba2dde23ded179b0))
+* Bump the dependencies group with 1 update ([45a5032](https://www.github.com/JaCraig/SimpleMail/commit/45a5032c796f199efc1cda46b41da093cc42d680))
+* Bump the dependencies group with 2 updates ([ce08d8e](https://www.github.com/JaCraig/SimpleMail/commit/ce08d8ef586ba9cdf828817f1f32ec4970ae3f49))
+
 <a name="5.1.6"></a>
 ## [5.1.6](https://www.github.com/JaCraig/SimpleMail/releases/tag/v5.1.6) (2025-11-13)
 
