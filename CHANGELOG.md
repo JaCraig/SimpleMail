@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="5.1.8"></a>
+## [5.1.8](https://www.github.com/JaCraig/SimpleMail/releases/tag/v5.1.8) (2025-12-10)
+
+### Bug Fixes
+
+* Bump the dependencies group with 1 update ([8def4aa](https://www.github.com/JaCraig/SimpleMail/commit/8def4aa198255e5dc4c6c0c4af188462fed41f7c))
+
+### Other
+
+* Merge pull request #98 from JaCraig/dependabot/nuget/SimpleMail/dependencies-b30b2030f9 ([193fb43](https://www.github.com/JaCraig/SimpleMail/commit/193fb4318e37d52383feb9d5aff600399b74df8c))
+* Specify languages for CodeQL analysis ([ed72e97](https://www.github.com/JaCraig/SimpleMail/commit/ed72e97a0a50995020ffec3353277e311065cffa))
+
 <a name="5.1.7"></a>
 ## [5.1.7](https://www.github.com/JaCraig/SimpleMail/releases/tag/v5.1.7) (2025-11-14)
 
