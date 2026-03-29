@@ -17,7 +17,7 @@
 		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Nullable>enable</Nullable>
-		<Version>5.1.12</Version>
+		<Version>5.2.0</Version>
 		<Title>SimpleMail</Title>
 		<Copyright>Copyright © James Craig 2016</Copyright>
 		<PackageIcon>Icon.png</PackageIcon>
@@ -48,18 +48,14 @@
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="MailKit" Version="4.15.1" />
-		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.201"
-			PrivateAssets="All" />
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.201" PrivateAssets="All" />
 		<PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="10.0.201">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 	</ItemGroup>
-	<Target Name="Husky" BeforeTargets="Restore;CollectPackageReferences"
-		Condition="'$(HUSKY)' != 0">
-		<Exec Command="dotnet tool restore" StandardOutputImportance="Low"
-			StandardErrorImportance="High" />
-		<Exec Command="dotnet husky install" StandardOutputImportance="Low"
-			StandardErrorImportance="High" WorkingDirectory=".." />
+	<Target Name="Husky" BeforeTargets="Restore;CollectPackageReferences" Condition="'$(HUSKY)' != 0">
+		<Exec Command="dotnet tool restore" StandardOutputImportance="Low" StandardErrorImportance="High" />
+		<Exec Command="dotnet husky install" StandardOutputImportance="Low" StandardErrorImportance="High" WorkingDirectory=".." />
 	</Target>
 </Project>
