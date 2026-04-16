@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="5.2.2"></a>
+## [5.2.2](https://www.github.com/JaCraig/SimpleMail/releases/tag/v5.2.2) (2026-04-16)
+
+### Bug Fixes
+
+* Bump the dependencies group with 1 update ([2d47c34](https://www.github.com/JaCraig/SimpleMail/commit/2d47c341bdbcf077ee8d3eda01eb219deda6fb73))
+
+### Other
+
+* Merge pull request #114 from JaCraig/dependabot/nuget/SimpleMail/dependencies-0c428dbeb2 ([aa274af](https://www.github.com/JaCraig/SimpleMail/commit/aa274afcd0dd16ac3c699947d9c6843bf2f270cc))
+
 <a name="5.2.1"></a>
 ## [5.2.1](https://www.github.com/JaCraig/SimpleMail/releases/tag/v5.2.1) (2026-04-15)
 
