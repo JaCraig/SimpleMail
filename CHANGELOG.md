@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="5.2.5"></a>
+## [5.2.5](https://www.github.com/JaCraig/SimpleMail/releases/tag/v5.2.5) (2026-05-28)
+
+### Bug Fixes
+
+* **workflows:** remove PERSONAL_ACCESS_TOKEN from workflows ([b7ef3c1](https://www.github.com/JaCraig/SimpleMail/commit/b7ef3c161d7821291c4133c73c15eeb0f78dc4a8))
+
+### Other
+
+* Merge pull request #119 from JaCraig/dependabot/nuget/SimpleMail.Tests/dependencies-3fec291e4a ([5a6718a](https://www.github.com/JaCraig/SimpleMail/commit/5a6718a0429b9b510ec6213b7ad23c641c72a896))
+* Bump the dependencies group with 2 updates ([6cd6ff5](https://www.github.com/JaCraig/SimpleMail/commit/6cd6ff5b0a1d6234b9141237a7e70c700884fe43))
+* **copilot:** add commit message guidelines ([6230e71](https://www.github.com/JaCraig/SimpleMail/commit/6230e715ee81bf79c9fa61ac9cf845573aca6788))
+
 <a name="5.2.4"></a>
 ## [5.2.4](https://www.github.com/JaCraig/SimpleMail/releases/tag/v5.2.4) (2026-05-13)
 
