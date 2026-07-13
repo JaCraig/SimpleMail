@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="5.2.6"></a>
+## [5.2.6](https://www.github.com/JaCraig/SimpleMail/releases/tag/v5.2.6) (2026-07-13)
+
+### Bug Fixes
+
+* Bump MailKit from 4.16.0 to 4.17.0 ([f70ac8c](https://www.github.com/JaCraig/SimpleMail/commit/f70ac8ccd3e02508723c4784383025193f0a77c0))
+* Bump the dependencies group with 1 update ([34f347a](https://www.github.com/JaCraig/SimpleMail/commit/34f347a951c60678c8e9ea5edbe96408226014cf))
+
+### Other
+
+* Merge pull request #120 from JaCraig/dependabot/nuget/SimpleMail/dependencies-62ce39c77c ([f9aed05](https://www.github.com/JaCraig/SimpleMail/commit/f9aed05e73d5f7d60f551cd53e28e02a40cc1a51))
+* Merge pull request #121 from JaCraig/dependabot/nuget/SimpleMail.Tests/dependencies-041891a2d4 ([25ec64b](https://www.github.com/JaCraig/SimpleMail/commit/25ec64beb6e25822385578f6a789591a5cd78d6a))
+* Merge pull request #122 from JaCraig/dependabot/nuget/SimpleMail/dependencies-991ee26f7c ([63ee755](https://www.github.com/JaCraig/SimpleMail/commit/63ee755fc29648f820d0571c757aa503248a0eab))
+* Merge pull request #123 from JaCraig/dependabot/nuget/SimpleMail.Tests/dependencies-407341980e ([6bba920](https://www.github.com/JaCraig/SimpleMail/commit/6bba9203d72aabd2eb029e2949fde6636aaf3a5f))
+* Merge pull request #124 from JaCraig/dependabot/nuget/SimpleMail.Tests/dependencies-eb871dcf1c ([258b971](https://www.github.com/JaCraig/SimpleMail/commit/258b971b39d5ccd16d4070cf305b5871d07c9940))
+* Bump the dependencies group with 1 update ([a32723f](https://www.github.com/JaCraig/SimpleMail/commit/a32723f42a4462c47bb4fdf3b3b49b7b283ca71b))
+* Bump the dependencies group with 1 update ([84eb679](https://www.github.com/JaCraig/SimpleMail/commit/84eb679e8dbdacb782bb385155c6cf6a52402f3a))
+* Bump the dependencies group with 1 update ([fc63f11](https://www.github.com/JaCraig/SimpleMail/commit/fc63f11d071761b125e0cd903670088b545d1a3c))
+
 <a name="5.2.5"></a>
 ## [5.2.5](https://www.github.com/JaCraig/SimpleMail/releases/tag/v5.2.5) (2026-05-28)
 
