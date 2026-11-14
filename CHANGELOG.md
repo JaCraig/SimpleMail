@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [versionize](https://github.com/versionize/versionize) for commit guidelines.
 
+<a name="6.0.0"></a>
+## [6.0.0](https://www.github.com/JaCraig/SimpleMail/releases/tag/v6.0.0) (2026-11-14)
+
+### Features
+
+* **framework:** upgrade .NET targets and dependencies ([ad3cf58](https://www.github.com/JaCraig/SimpleMail/commit/ad3cf589509b97e05922bc3bb5ca1e54f75bb902))
+
+### Breaking Changes
+
+* **framework:** upgrade .NET targets and dependencies ([ad3cf58](https://www.github.com/JaCraig/SimpleMail/commit/ad3cf589509b97e05922bc3bb5ca1e54f75bb902))
+
 <a name="5.2.8"></a>
 ## [5.2.8](https://www.github.com/JaCraig/SimpleMail/releases/tag/v5.2.8) (2026-11-08)
 
