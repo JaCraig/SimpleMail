@@ -14,6 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
+using MailKit;
 using MailKit.Net.Smtp;
 using MimeKit;
 using MimeKit.Text;
@@ -44,6 +45,19 @@ namespace SimpleMail
             : this(null)
         {
         }
+
+        /// <summary>
+        /// Releases unmanaged and - optionally - managed resources.
+        /// </summary>
+        ~Email()
+        {
+            Dispose();
+        }
+
+        /// <summary>
+        /// Determines if the client is externally owned (don't dispose if it is)
+        /// </summary>
+        private readonly bool _ClientExternallyOwned = client is not null;
 
         /// <summary>
         /// Gets the attachments.
@@ -145,11 +159,6 @@ namespace SimpleMail
         /// Gets or sets the SMTP client.
         /// </summary>
         private SmtpClient? SmtpClient { get; set; } = client ?? new SmtpClient();
-
-        /// <summary>
-        /// Determines if the client is externally owned (don't dispose if it is)
-        /// </summary>
-        private readonly bool _ClientExternallyOwned = client is not null;
 
         /// <summary>
         /// Releases the resources used by the <see cref="Email"/> class.
@@ -345,14 +354,6 @@ namespace SimpleMail
             }
             InternalMessage.Body = Content;
             return InternalMessage;
-        }
-
-        /// <summary>
-        /// Releases unmanaged and - optionally - managed resources.
-        /// </summary>
-        ~Email()
-        {
-            Dispose();
         }
     }
 }
